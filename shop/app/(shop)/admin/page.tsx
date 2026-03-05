@@ -31,6 +31,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [filter, setFilter] = useState("all");
+  const [lightbox, setLightbox] = useState<{ src: string; code: string } | null>(null);
 
   useEffect(() => {
     fetch("/api/orders")
@@ -216,7 +217,8 @@ export default function AdminPage() {
                             <img
                               src={`/images/products/${imgCode}.png`}
                               alt={item.code}
-                              className="w-9 h-9 rounded object-contain bg-gray-50"
+                              className="w-9 h-9 rounded object-contain bg-gray-50 cursor-pointer hover:ring-2 hover:ring-persimmon-green/40 transition"
+                              onClick={() => setLightbox({ src: `/images/products/${imgCode}.png`, code: item.code })}
                             />
                           </td>
                           <td className="py-2.5">
@@ -248,6 +250,32 @@ export default function AdminPage() {
               </div>
             </div>
           )}
+        </div>
+      )}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={() => setLightbox(null)}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl p-4 max-w-md w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-500"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src={lightbox.src}
+              alt={lightbox.code}
+              className="w-full rounded-xl object-contain bg-gray-50"
+            />
+            <p className="text-center text-sm font-semibold text-persimmon-navy mt-3">{lightbox.code}</p>
+          </div>
         </div>
       )}
     </div>

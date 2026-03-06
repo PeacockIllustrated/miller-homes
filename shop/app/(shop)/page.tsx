@@ -56,7 +56,7 @@ export default async function Home({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories.map((category) => (
+        {categories.filter((c) => c.slug !== "for-admin-review").map((category) => (
           <Link
             key={category.slug}
             href={`/category/${category.slug}`}

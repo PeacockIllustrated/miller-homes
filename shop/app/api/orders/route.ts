@@ -29,11 +29,15 @@ export async function POST(req: NextRequest) {
 
     // Recalculate totals server-side (never trust client)
     let subtotal = 0;
-    const validatedItems = items.map((item: { code: string; baseCode?: string; name: string; size?: string; material?: string; description?: string; price: number; quantity: number }) => {
+    const validatedItems = items.map((item: { code: string; baseCode?: string; name: string; size?: string; material?: string; description?: string; price: number; quantity: number; customSign?: { signType: string; textContent: string; shape: string; additionalNotes: string } }) => {
       const price = Math.round(Number(item.price) * 100) / 100;
       const quantity = Math.max(1, Math.min(9999, Math.floor(Number(item.quantity))));
-      if (price <= 0 || price > 100000) {
+      const isCustom = !!item.customSign;
+      if (!isCustom && (price <= 0 || price > 100000)) {
         throw new Error(`Invalid price for item ${item.code}`);
+      }
+      if (isCustom && price !== 0) {
+        throw new Error(`Custom sign items must have price 0`);
       }
       const lineTotal = Math.round(price * quantity * 100) / 100;
       subtotal += lineTotal;
@@ -46,6 +50,12 @@ export async function POST(req: NextRequest) {
         price,
         quantity,
         line_total: lineTotal,
+        custom_data: item.customSign ? {
+          signType: String(item.customSign.signType),
+          textContent: String(item.customSign.textContent),
+          shape: String(item.customSign.shape),
+          additionalNotes: String(item.customSign.additionalNotes || ""),
+        } : null,
       };
     });
 
@@ -81,7 +91,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Insert order items
-    const itemsWithOrderId = validatedItems.map((item: { code: string; base_code: string | null; name: string; size: string | null; material: string | null; price: number; quantity: number; line_total: number }) => ({
+    const itemsWithOrderId = validatedItems.map((item: { code: string; base_code: string | null; name: string; size: string | null; material: string | null; price: number; quantity: number; line_total: number; custom_data: Record<string, string> | null }) => ({
       order_id: order.id,
       ...item,
     }));
@@ -160,6 +170,7 @@ export async function GET() {
           size: item.size,
           price: Number(item.price),
           quantity: item.quantity,
+          customData: item.custom_data || null,
         })),
       subtotal: Number(o.subtotal),
       vat: Number(o.vat),

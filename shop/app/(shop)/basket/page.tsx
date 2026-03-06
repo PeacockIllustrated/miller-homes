@@ -56,11 +56,15 @@ export default function BasketPage() {
             <div className="flex-1 min-w-0">
               <h3 className="font-medium text-gray-900 truncate">{item.name}</h3>
               <p className="text-sm text-gray-400 mt-0.5">
-                {item.code}{item.size ? ` \u2022 ${item.size}` : ""}{item.material ? ` \u2022 ${item.material}` : ""}
+                {item.customSign ? `${item.customSign.signType.charAt(0).toUpperCase() + item.customSign.signType.slice(1).replace("-", " ")} Sign` : item.code}{item.size ? ` \u2022 ${item.size}` : ""}{item.material ? ` \u2022 ${item.material}` : ""}
               </p>
-              <p className="text-persimmon-navy font-semibold mt-1.5 text-sm">
-                {"\u00A3"}{item.price.toFixed(2)} each
-              </p>
+              {item.customSign ? (
+                <p className="text-amber-600 font-semibold mt-1.5 text-sm">Quote on request</p>
+              ) : (
+                <p className="text-persimmon-navy font-semibold mt-1.5 text-sm">
+                  {"\u00A3"}{item.price.toFixed(2)} each
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col items-end justify-between">
@@ -91,9 +95,13 @@ export default function BasketPage() {
                 </button>
               </div>
 
-              <p className="font-bold text-persimmon-navy text-sm">
-                {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
-              </p>
+              {item.customSign ? (
+                <p className="font-bold text-amber-600 text-xs">Quote</p>
+              ) : (
+                <p className="font-bold text-persimmon-navy text-sm">
+                  {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
+                </p>
+              )}
             </div>
           </div>
         ))}
@@ -116,6 +124,12 @@ export default function BasketPage() {
             {"\u00A3"}{(totalPrice * 1.2).toFixed(2)}
           </span>
         </div>
+
+        {items.some((i) => i.customSign) && (
+          <p className="text-xs text-amber-600 mb-4 leading-relaxed">
+            This order includes custom sign requests. Final pricing for those items will be confirmed after review.
+          </p>
+        )}
 
         <div className="flex gap-3">
           <Link

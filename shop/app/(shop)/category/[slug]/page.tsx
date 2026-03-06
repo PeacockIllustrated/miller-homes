@@ -31,6 +31,22 @@ export default async function CategoryPage({
         <p className="text-xs text-gray-300 mt-1">{category.products.length} products</p>
       </div>
 
+      {slug === "custom-signs" && (
+        <Link
+          href="/custom-sign"
+          className="block bg-gradient-to-r from-persimmon-navy to-persimmon-navy-light rounded-2xl p-6 mb-6 text-white hover:shadow-lg transition group"
+        >
+          <h3 className="text-lg font-bold">Need a completely custom sign?</h3>
+          <p className="text-sm text-white/70 mt-1">Design your own sign with our custom sign builder and get a quote.</p>
+          <span className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-persimmon-green-light group-hover:gap-2 transition-all">
+            Start designing
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </Link>
+      )}
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {category.products.map((product) => (
           <ProductCard key={product.baseCode} product={product} />

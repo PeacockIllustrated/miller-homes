@@ -75,6 +75,7 @@ export async function GET(
         size: item.size,
         price: Number(item.price),
         quantity: item.quantity,
+        customData: item.custom_data || null,
       })),
       subtotal: Number(order.subtotal),
       vat: Number(order.vat),

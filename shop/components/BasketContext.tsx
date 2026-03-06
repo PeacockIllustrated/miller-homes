@@ -2,6 +2,13 @@
 
 import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
 
+export interface CustomSignData {
+  signType: string;
+  textContent: string;
+  shape: string;
+  additionalNotes: string;
+}
+
 export interface BasketItem {
   code: string;
   baseCode: string;
@@ -12,6 +19,7 @@ export interface BasketItem {
   price: number;
   quantity: number;
   image: string | null;
+  customSign?: CustomSignData;
 }
 
 interface BasketContextType {

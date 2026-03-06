@@ -75,7 +75,7 @@ export default function BasketDrawer() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-900 truncate">{item.name}</p>
-                    <p className="text-xs text-gray-500">{item.code}{item.size ? ` \u2022 ${item.size}` : ""}</p>
+                    <p className="text-xs text-gray-500">{item.customSign ? `${item.customSign.signType.charAt(0).toUpperCase() + item.customSign.signType.slice(1).replace("-", " ")} Sign` : item.code}{item.size ? ` \u2022 ${item.size}` : ""}</p>
                     <div className="flex items-center justify-between mt-1.5">
                       <div className="flex items-center gap-1">
                         <button
@@ -93,9 +93,13 @@ export default function BasketDrawer() {
                         </button>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold text-persimmon-navy">
-                          {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
-                        </span>
+                        {item.customSign ? (
+                          <span className="text-xs font-semibold text-amber-600">Quote</span>
+                        ) : (
+                          <span className="text-sm font-semibold text-persimmon-navy">
+                            {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
+                          </span>
+                        )}
                         <button
                           onClick={() => removeItem(item.code)}
                           className="text-gray-300 hover:text-red-500 transition"
@@ -124,6 +128,11 @@ export default function BasketDrawer() {
                 <span>Total</span>
                 <span>{"\u00A3"}{(totalPrice * 1.2).toFixed(2)}</span>
               </div>
+              {items.some((i) => i.customSign) && (
+                <p className="text-[11px] text-amber-600 leading-relaxed">
+                  Custom sign items will be quoted separately.
+                </p>
+              )}
               <div className="grid grid-cols-2 gap-2 pt-1">
                 <Link
                   href="/basket"

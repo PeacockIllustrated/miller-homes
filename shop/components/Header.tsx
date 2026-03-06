@@ -41,6 +41,16 @@ export default function Header() {
 
           <div className="flex items-center gap-2">
             <Link
+              href="/custom-sign"
+              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-persimmon-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+              </svg>
+              Custom Sign
+            </Link>
+
+            <Link
               href="/admin"
               className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-persimmon-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
             >
@@ -83,6 +93,16 @@ export default function Header() {
         {menuOpen && (
           <div className="md:hidden px-4 pb-3 border-t border-gray-100 pt-3">
             <SearchBar />
+            <Link
+              href="/custom-sign"
+              className="flex items-center gap-2 text-sm text-gray-500 hover:text-persimmon-navy mt-3 px-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+              </svg>
+              Custom Sign
+            </Link>
             <Link
               href="/admin"
               className="flex items-center gap-2 text-sm text-gray-500 hover:text-persimmon-navy mt-3 px-1"

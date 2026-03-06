@@ -11,6 +11,12 @@ interface OrderItem {
   price: number;
   quantity: number;
   line_total: number;
+  custom_data?: {
+    signType: string;
+    textContent: string;
+    shape: string;
+    additionalNotes: string;
+  } | null;
 }
 
 interface OrderData {
@@ -33,6 +39,7 @@ function buildImageAttachments(items: OrderItem[], siteUrl: string) {
   const seen = new Set<string>();
   return items
     .map((item) => {
+      if (item.custom_data) return null; // No CID image for custom signs
       const imgCode = (item.base_code || item.code.replace(/\/.*$/, "")).replace(/\//g, "_");
       if (seen.has(imgCode)) return null;
       seen.add(imgCode);
@@ -46,9 +53,41 @@ function buildImageAttachments(items: OrderItem[], siteUrl: string) {
     .filter((a): a is NonNullable<typeof a> => a !== null);
 }
 
+const SIGN_TYPE_COLORS: Record<string, { bg: string; fg: string }> = {
+  warning: { bg: "#FFD700", fg: "#000" },
+  prohibition: { bg: "#CC0000", fg: "#FFF" },
+  mandatory: { bg: "#005BBB", fg: "#FFF" },
+  information: { bg: "#009639", fg: "#FFF" },
+  "fire-safety": { bg: "#CC0000", fg: "#FFF" },
+  directional: { bg: "#009639", fg: "#FFF" },
+  security: { bg: "#005BBB", fg: "#FFF" },
+  environmental: { bg: "#009639", fg: "#FFF" },
+};
+
 function itemRowsHtml(items: OrderItem[]): string {
   return items
     .map((item) => {
+      if (item.custom_data) {
+        const colors = SIGN_TYPE_COLORS[item.custom_data.signType] || { bg: "#666", fg: "#FFF" };
+        const typeLabel = item.custom_data.signType.charAt(0).toUpperCase() + item.custom_data.signType.slice(1).replace("-", " ");
+        return `
+    <tr>
+      <td style="padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px">
+        <div style="width:40px;height:40px;border-radius:4px;background:${colors.bg};display:flex;align-items:center;justify-content:center">
+          <span style="color:${colors.fg};font-size:10px;font-weight:bold;text-align:center;line-height:1.1">${typeLabel}</span>
+        </div>
+      </td>
+      <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle">
+        <strong style="color:#333">CUSTOM SIGN REQUEST</strong><br/>
+        <span style="color:#666;font-size:12px">${typeLabel} &middot; ${item.custom_data.shape} &middot; ${item.size || ""}</span><br/>
+        <span style="color:#c2410c;font-size:12px">Text: &ldquo;${item.custom_data.textContent}&rdquo;</span>
+        ${item.custom_data.additionalNotes ? `<br/><span style="color:#999;font-size:11px">Notes: ${item.custom_data.additionalNotes}</span>` : ""}
+      </td>
+      <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle">${item.quantity}</td>
+      <td style="padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:12px;text-align:right;vertical-align:middle;color:#d97706;font-weight:bold">Quote</td>
+    </tr>`;
+      }
+
       const imgCode = (item.base_code || item.code.replace(/\/.*$/, "")).replace(/\//g, "_");
       return `
     <tr>
@@ -66,7 +105,7 @@ function itemRowsHtml(items: OrderItem[]): string {
     .join("");
 }
 
-function totalsHtml(subtotal: number, vat: number, total: number): string {
+function totalsHtml(subtotal: number, vat: number, total: number, hasCustomItems: boolean): string {
   return `
     <tr>
       <td colspan="3" style="padding:8px 12px;text-align:right;font-size:14px;color:#666">Subtotal</td>
@@ -79,7 +118,8 @@ function totalsHtml(subtotal: number, vat: number, total: number): string {
     <tr>
       <td colspan="3" style="padding:8px 12px;text-align:right;font-weight:bold;font-size:14px;color:#00474a">Total</td>
       <td style="padding:8px 12px 8px 8px;text-align:right;font-weight:bold;font-size:14px;color:#00474a">&pound;${total.toFixed(2)}</td>
-    </tr>`;
+    </tr>
+    ${hasCustomItems ? `<tr><td colspan="4" style="padding:12px;text-align:center;font-size:12px;color:#d97706;background:#fffbeb;border-radius:0 0 8px 8px">* Custom sign items will be quoted separately. Final pricing confirmed after review.</td></tr>` : ""}`;
 }
 
 export async function sendOrderConfirmation(order: OrderData): Promise<void> {
@@ -124,7 +164,7 @@ export async function sendOrderConfirmation(order: OrderData): Promise<void> {
               ${itemRowsHtml(order.items)}
             </tbody>
             <tfoot>
-              ${totalsHtml(order.subtotal, order.vat, order.total)}
+              ${totalsHtml(order.subtotal, order.vat, order.total, order.items.some(i => !!i.custom_data))}
             </tfoot>
           </table>
 
@@ -196,7 +236,7 @@ export async function sendTeamNotification(order: OrderData): Promise<void> {
               ${itemRowsHtml(order.items)}
             </tbody>
             <tfoot>
-              ${totalsHtml(order.subtotal, order.vat, order.total)}
+              ${totalsHtml(order.subtotal, order.vat, order.total, order.items.some(i => !!i.custom_data))}
             </tfoot>
           </table>
         </div>

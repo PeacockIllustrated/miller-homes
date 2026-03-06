@@ -50,6 +50,7 @@ export default function CheckoutPage() {
             description: item.description,
             price: item.price,
             quantity: item.quantity,
+            ...(item.customSign ? { customSign: item.customSign } : {}),
           })),
           subtotal: totalPrice,
           vat: totalPrice * 0.2,
@@ -138,11 +139,15 @@ export default function CheckoutPage() {
               {items.map((item) => (
                 <div key={item.code} className="flex justify-between text-sm">
                   <span className="text-gray-500 truncate mr-2">
-                    {item.code} x{item.quantity}
+                    {item.customSign ? "Custom Sign" : item.code} x{item.quantity}
                   </span>
-                  <span className="font-medium text-gray-700 shrink-0">
-                    {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
-                  </span>
+                  {item.customSign ? (
+                    <span className="font-medium text-amber-600 shrink-0 text-xs">Quote</span>
+                  ) : (
+                    <span className="font-medium text-gray-700 shrink-0">
+                      {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
@@ -173,6 +178,11 @@ export default function CheckoutPage() {
             <p className="text-[11px] text-gray-400 mt-3 text-center leading-relaxed">
               All prices exclude VAT. You will receive a confirmation email.
             </p>
+            {items.some((i) => i.customSign) && (
+              <p className="text-[11px] text-amber-600 mt-2 text-center leading-relaxed">
+                Custom sign items will be quoted separately after review.
+              </p>
+            )}
           </div>
         </div>
       </form>

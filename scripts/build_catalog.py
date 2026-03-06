@@ -406,6 +406,28 @@ def build_catalog():
         other_cat['productCount'] = len(other_cat['products'])
         categories.append(other_cat)
 
+    # Move products without images into "for Admin Review" category
+    admin_review_cat = {
+        'name': 'for Admin Review',
+        'slug': 'for-admin-review',
+        'description': 'Products awaiting image review. These may need images added or may no longer be on the current roster.',
+        'products': [],
+    }
+    for cat in categories:
+        with_images = []
+        for product in cat['products']:
+            if product.get('image'):
+                with_images.append(product)
+            else:
+                admin_review_cat['products'].append(product)
+        cat['products'] = with_images
+
+    if admin_review_cat['products']:
+        admin_review_cat['products'].sort(key=lambda p: p['baseCode'])
+        admin_review_cat['productCount'] = len(admin_review_cat['products'])
+        categories.append(admin_review_cat)
+        print(f"Moved {len(admin_review_cat['products'])} products without images to 'for Admin Review'")
+
     # Remove empty categories
     categories = [c for c in categories if c['products']]
 

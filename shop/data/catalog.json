@@ -1049,31 +1049,6 @@
           "image": "/images/products/PCFA107.png"
         },
         {
-          "baseCode": "PCFA108",
-          "variants": [
-            {
-              "code": "PCFA108",
-              "size": "2440x1220mm",
-              "material": "10mm Correx",
-              "description": "2440x1220mm Portrait Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": null
-            },
-            {
-              "code": "PCFA108/W",
-              "size": "1220x800mm",
-              "material": "4mm Correx",
-              "description": "1220x800mm Main Compound Board (4mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            }
-          ],
-          "name": "Portrait Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
-          "image": null
-        },
-        {
           "baseCode": "PCFCCS18",
           "variants": [
             {
@@ -1088,47 +1063,6 @@
           ],
           "name": "Meet the person who is…",
           "image": "/images/products/PCFCCS18.png"
-        },
-        {
-          "baseCode": "PCFCOV-19-ENT",
-          "variants": [
-            {
-              "code": "PCFCOV-19-ENT",
-              "size": "375x1220mm",
-              "material": "5mm Foamex",
-              "description": "Covid-19 3-part Site Entrance Sign Set (5mm Foamex) Contains:\n1x 375x1220mm Covid-19 Notice\n1x 1840x450mm Attention all visitors\n1x 1840x450mm Help stop the spread",
-              "price": 170.0,
-              "persimmonPrice": 134.3,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Covid-19 3-part Site Entrance Sign Set (5mm Foamex) Contains:\n1x 375x1220mm Covid-19 Notice\n1x 1840x450mm Attention all visitors\n1x 1840x450mm Help stop the spread",
-          "image": null
-        },
-        {
-          "baseCode": "PCFCSSE",
-          "variants": [
-            {
-              "code": "PCFCSSE/SMALL",
-              "size": "610x2440mm",
-              "material": "10mm Correx",
-              "description": "610x2440mm Site Entrance Board (10mm Correx) Site name to read:",
-              "price": 60.0,
-              "persimmonPrice": 47.4,
-              "sizeSuffix": "SMALL"
-            },
-            {
-              "code": "PCFCSSE/STANDARD",
-              "size": "1220x2440mm",
-              "material": "10mm Correx",
-              "description": "1220x2440mm Site Entrance Board (10mm Correx) Site name to read:",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": "STANDARD"
-            }
-          ],
-          "name": "Site Entrance Board (10mm Correx) Site name to read:",
-          "image": null
         }
       ],
       "productCount": 15
@@ -1153,22 +1087,6 @@
           ],
           "name": "This is a no smoking site",
           "image": "/images/products/PA116.png"
-        },
-        {
-          "baseCode": "PA127",
-          "variants": [
-            {
-              "code": "PA127/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Visitors & Deliveries (4mm Correx + Space for Arrow)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "Visitors & Deliveries",
-          "image": null
         },
         {
           "baseCode": "PA128PCF",
@@ -1529,40 +1447,6 @@
           ],
           "name": "Notice this site operates between the hours of...",
           "image": "/images/products/PCF15.png"
-        },
-        {
-          "baseCode": "PCF152",
-          "variants": [
-            {
-              "code": "PCF152/STANDARD",
-              "size": "2440x1220mm",
-              "material": "10mm Correx",
-              "description": "2440x1220mm Site Entrance Multi Sign (10mm Correx)",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": "STANDARD"
-            },
-            {
-              "code": "PCF152/W",
-              "size": "1220x800mm",
-              "material": "4mm Correx",
-              "description": "1220x800mm Site Entrance Multi Sign (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF152/Y",
-              "size": "1800x1220mm",
-              "material": "10mm Correx",
-              "description": "1800x1220mm Site Entrance Multi Sign (10mm Correx)",
-              "price": 61.68,
-              "persimmonPrice": 48.73,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Site Entrance Multi Sign",
-          "image": null
         },
         {
           "baseCode": "PCF153",
@@ -2688,70 +2572,6 @@
           "image": "/images/products/PA120.png"
         },
         {
-          "baseCode": "PA121",
-          "variants": [
-            {
-              "code": "PA121/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Gloves must be worn (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "Gloves must be worn",
-          "image": null
-        },
-        {
-          "baseCode": "PA122",
-          "variants": [
-            {
-              "code": "PA122/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Eye protection must be worn (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "Eye protection must be worn",
-          "image": null
-        },
-        {
-          "baseCode": "PA123",
-          "variants": [
-            {
-              "code": "PA123/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Safety footwear with toecaps & midsoles must be worn (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "Safety footwear with toecaps & midsoles must be worn",
-          "image": null
-        },
-        {
-          "baseCode": "PA49",
-          "variants": [
-            {
-              "code": "PA49/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Hard hats & safety footwear must be worn on this site (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Hard hats & safety footwear must be worn on this site",
-          "image": null
-        },
-        {
           "baseCode": "PCF05",
           "variants": [
             {
@@ -2863,92 +2683,6 @@
           "image": "/images/products/PCF129.png"
         },
         {
-          "baseCode": "PCF321",
-          "variants": [
-            {
-              "code": "PCF321/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm This PPE is for visitors only (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF321/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm This PPE is for visitors only (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF321/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm This PPE is for visitors only (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF321/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm This PPE is for visitors only (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "This PPE is for visitors only",
-          "image": null
-        },
-        {
-          "baseCode": "PCF422",
-          "variants": [
-            {
-              "code": "PCF422/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm No hard hat no work (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF422/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm No hard hat no work (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF422/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm No hard hat no work (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF422/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm No hard hat no work (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "No hard hat no work",
-          "image": null
-        },
-        {
           "baseCode": "PCF961",
           "variants": [
             {
@@ -3035,56 +2769,6 @@
           "image": "/images/products/PCF962.png"
         },
         {
-          "baseCode": "PCF980",
-          "variants": [
-            {
-              "code": "PCF980/W",
-              "size": "800x1220mm",
-              "material": "4mm Correx",
-              "description": "800x1220mm Site Safety Sign 1 Safety helmets must... (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF980/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Site Safety Sign 1 Safety helmets must... (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Site Safety Sign 1 Safety helmets must...",
-          "image": null
-        },
-        {
-          "baseCode": "PCF982",
-          "variants": [
-            {
-              "code": "PCF982/W",
-              "size": "800x1220mm",
-              "material": "4mm Correx",
-              "description": "800x1220mm Site Safety Sign 3 PPE must be worn... (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF982/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Site Safety Sign 3 PPE must be worn... (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Site Safety Sign 3 PPE must be worn...",
-          "image": null
-        },
-        {
           "baseCode": "PCFS97M",
           "variants": [
             {
@@ -3155,54 +2839,6 @@
           ],
           "name": "Get the \"Thumbs Up\" before approaching or passing me! Be safe, get seen! (Self-adhesive Vinyl)",
           "image": "/images/products/PA318_S_100.png"
-        },
-        {
-          "baseCode": "PA46",
-          "variants": [
-            {
-              "code": "PA46/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm DANGER High voltage Keep away (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "DANGER High voltage Keep away",
-          "image": null
-        },
-        {
-          "baseCode": "PA47",
-          "variants": [
-            {
-              "code": "PA47/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm DANGER Underground live wires (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "DANGER Underground live wires",
-          "image": null
-        },
-        {
-          "baseCode": "PA48",
-          "variants": [
-            {
-              "code": "PA48/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm DANGER Underground live wires (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            }
-          ],
-          "name": "DANGER Underground live wires",
-          "image": null
         },
         {
           "baseCode": "PCF02",
@@ -3936,49 +3572,6 @@
           "image": "/images/products/PCF37.png"
         },
         {
-          "baseCode": "PCF377",
-          "variants": [
-            {
-              "code": "PCF377/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Warning pedestrians have priority (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF377/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Warning pedestrians have priority (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF377/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Warning pedestrians have priority (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF377/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Warning pedestrians have priority (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Warning pedestrians have priority",
-          "image": null
-        },
-        {
           "baseCode": "PCF38",
           "variants": [
             {
@@ -4710,70 +4303,6 @@
           "image": "/images/products/PCF983.png"
         },
         {
-          "baseCode": "PCFLHS01",
-          "variants": [
-            {
-              "code": "PCFLHS01",
-              "size": "610x1220mm",
-              "material": "10mm Correx",
-              "description": "610x1220mm Building sites are dangerous (10mm Correx)",
-              "price": 40.92,
-              "persimmonPrice": 32.33,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Building sites are dangerous",
-          "image": null
-        },
-        {
-          "baseCode": "PCFLHS03",
-          "variants": [
-            {
-              "code": "PCFLHS03",
-              "size": "610x1220mm",
-              "material": "10mm Correx",
-              "description": "610x1220mm Look out for danger (10mm Correx)",
-              "price": 40.92,
-              "persimmonPrice": 32.33,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Look out for danger",
-          "image": null
-        },
-        {
-          "baseCode": "PCFLHS11",
-          "variants": [
-            {
-              "code": "PCFLHS11",
-              "size": "1220x2440mm",
-              "material": "10mm Correx",
-              "description": "1220x2440mm Building sites are dangerous (10mm Correx)",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Building sites are dangerous",
-          "image": null
-        },
-        {
-          "baseCode": "PCFLHS13",
-          "variants": [
-            {
-              "code": "PCFLHS13",
-              "size": "1220x2440mm",
-              "material": "10mm Correx",
-              "description": "1220x2440mm Look out for danger (10mm Correx)",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Look out for danger",
-          "image": null
-        },
-        {
           "baseCode": "PCFS10",
           "variants": [
             {
@@ -5435,49 +4964,6 @@
           ],
           "name": "Fire point",
           "image": "/images/products/PCF723.png"
-        },
-        {
-          "baseCode": "PCF730",
-          "variants": [
-            {
-              "code": "PCF730/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm EN3 Fire extinguisher colour code (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF730/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm EN3 Fire extinguisher colour code (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF730/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm EN3 Fire extinguisher colour code (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF730/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm EN3 Fire extinguisher colour code (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "EN3 Fire extinguisher colour code",
-          "image": null
         }
       ],
       "productCount": 15
@@ -5848,49 +5334,6 @@
           "image": "/images/products/PCF361.png"
         },
         {
-          "baseCode": "PCF362",
-          "variants": [
-            {
-              "code": "PCF362/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Drivers beware pedestrians crossing ahead (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF362/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Drivers beware pedestrians crossing ahead (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF362/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Drivers beware pedestrians crossing ahead (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF362/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Drivers beware pedestrians crossing ahead (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Drivers beware pedestrians crossing ahead",
-          "image": null
-        },
-        {
           "baseCode": "PCF371",
           "variants": [
             {
@@ -5975,49 +5418,6 @@
           ],
           "name": "Pedestrians beware uneven surface",
           "image": "/images/products/PCF372.png"
-        },
-        {
-          "baseCode": "PCF373",
-          "variants": [
-            {
-              "code": "PCF373/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Pedestrian crossing ahead (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF373/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Pedestrian crossing ahead (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF373/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Pedestrian crossing ahead (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF373/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Pedestrian crossing ahead (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Pedestrian crossing ahead",
-          "image": null
         },
         {
           "baseCode": "PCF374",
@@ -6501,54 +5901,6 @@
       "description": "Help protect your premises from intruders or warn of security measures such as CCTV.",
       "products": [
         {
-          "baseCode": "PA118",
-          "variants": [
-            {
-              "code": "PA118/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm WARNING Site security on patrol (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "WARNING Site security on patrol",
-          "image": null
-        },
-        {
-          "baseCode": "PA124",
-          "variants": [
-            {
-              "code": "PA124/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm KEEP OUT - This company will not be held responsible for any injuries to unauthorised persons on this site (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "KEEP OUT - This company will not be held responsible for any injuries to unauthorised persons on this site",
-          "image": null
-        },
-        {
-          "baseCode": "PA41",
-          "variants": [
-            {
-              "code": "PA41/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm No unauthorised persons beyond this point (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "No unauthorised persons beyond this point",
-          "image": null
-        },
-        {
           "baseCode": "PCF01",
           "variants": [
             {
@@ -6719,22 +6071,6 @@
           ],
           "name": "Any person caught pilfering or causing damage will...",
           "image": "/images/products/PCF20.png"
-        },
-        {
-          "baseCode": "PCF200",
-          "variants": [
-            {
-              "code": "PCF200",
-              "size": null,
-              "material": null,
-              "description": "Compound Sign Pack Main Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
-              "price": 266.06,
-              "persimmonPrice": 210.19,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Compound Sign Pack Main Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
-          "image": null
         },
         {
           "baseCode": "PCF511",
@@ -6959,38 +6295,6 @@
       "slug": "health-signs",
       "description": "Display signage around welfare facilities to ensure essential areas can be easily located.",
       "products": [
-        {
-          "baseCode": "PA125",
-          "variants": [
-            {
-              "code": "PA125/M",
-              "size": "600x400mm",
-              "material": "4mm Correx",
-              "description": "600x400mm First aid - Name - Location The nearest first aid box is located (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "First aid - Name - Location The nearest first aid box is located",
-          "image": null
-        },
-        {
-          "baseCode": "PA98",
-          "variants": [
-            {
-              "code": "PA98",
-              "size": "1220x3050mm",
-              "material": "10mm Correx",
-              "description": "1220x3050mm* Canteen Notice Board (10mm Correx + 12x A4 (P) Folded Holders & A2 Health and Safety Law Poster) *Supplied in 3 sections.",
-              "price": 180.86,
-              "persimmonPrice": 142.88,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "* Canteen Notice Board (10mm Correx + 12x A4 (P) Folded Holders & A2 Health and Safety Law Poster) *Supplied in 3 sections.",
-          "image": null
-        },
         {
           "baseCode": "PCF13",
           "variants": [
@@ -7626,49 +6930,6 @@
           ],
           "name": "Mobile phone area",
           "image": "/images/products/PCF911.png"
-        },
-        {
-          "baseCode": "PCF984",
-          "variants": [
-            {
-              "code": "PCF984/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF984/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF984/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF984/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Prevent the spread of Coronavirus wash your hands frequently",
-          "image": null
         }
       ],
       "productCount": 18
@@ -9430,22 +8691,6 @@
           "image": "/images/products/PCFSB37.png"
         },
         {
-          "baseCode": "PCFSB39",
-          "variants": [
-            {
-              "code": "PCFSB39/H",
-              "size": "900x400mm",
-              "material": "Scaffold Banner",
-              "description": "900x400mm Safety equipment must be worn on this site (Scaffold Banner)",
-              "price": 22.5,
-              "persimmonPrice": 17.77,
-              "sizeSuffix": "H"
-            }
-          ],
-          "name": "Safety equipment must be worn on this site",
-          "image": null
-        },
-        {
           "baseCode": "PCFSB40",
           "variants": [
             {
@@ -9476,22 +8721,6 @@
           ],
           "name": "Safe working load (Side A) Danger scaffolding incomplete (Side B)",
           "image": "/images/products/PCFSB45.png"
-        },
-        {
-          "baseCode": "PCFSB48",
-          "variants": [
-            {
-              "code": "PCFSB48/H",
-              "size": "900x1000mm",
-              "material": null,
-              "description": "900x1000mm Company Info. Banner (Scaffold Banner)\n- Tel. Number:\n- Website:",
-              "price": 53.75,
-              "persimmonPrice": 42.46,
-              "sizeSuffix": "H"
-            }
-          ],
-          "name": "Company Info. Banner (Scaffold Banner)\n- Tel. Number:\n- Website:",
-          "image": null
         },
         {
           "baseCode": "PCFSB94",
@@ -9958,22 +9187,6 @@
           "image": "/images/products/PCFSF37.png"
         },
         {
-          "baseCode": "PCFSF39",
-          "variants": [
-            {
-              "code": "PCFSF39",
-              "size": "600x400mm",
-              "material": "SCAF-FOLD",
-              "description": "600x400mm Safety equipment must be worn on this site (SCAF-FOLD)",
-              "price": 11.2,
-              "persimmonPrice": 8.85,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Safety equipment must be worn on this site",
-          "image": null
-        },
-        {
           "baseCode": "PCFSF40",
           "variants": [
             {
@@ -10141,22 +9354,6 @@
       "slug": "traffic-signs",
       "description": "Ensure correct temporary site traffic signs are in place to minimise risk of traffic accidents.",
       "products": [
-        {
-          "baseCode": "PA117",
-          "variants": [
-            {
-              "code": "PA117/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm WARNING Site traffic (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "WARNING Site traffic",
-          "image": null
-        },
         {
           "baseCode": "PA126",
           "variants": [
@@ -10761,22 +9958,6 @@
           ],
           "name": "Please look out for site traffic in this area",
           "image": "/images/products/PCFS14.png"
-        },
-        {
-          "baseCode": "PCFTM",
-          "variants": [
-            {
-              "code": "PCFTM",
-              "size": null,
-              "material": "4mm Correx",
-              "description": "Traffic Management Sign Pack (4mm Correx)",
-              "price": 66.22,
-              "persimmonPrice": 52.31,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Traffic Management Sign Pack",
-          "image": null
         }
       ],
       "productCount": 19
@@ -10801,38 +9982,6 @@
           ],
           "name": "Residents parking only",
           "image": "/images/products/PA40.png"
-        },
-        {
-          "baseCode": "PA42",
-          "variants": [
-            {
-              "code": "PA42/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm No Contractors Parking (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "No Contractors Parking",
-          "image": null
-        },
-        {
-          "baseCode": "PA43",
-          "variants": [
-            {
-              "code": "PA43/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm No parking available on site (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            }
-          ],
-          "name": "No parking available on site",
-          "image": null
         },
         {
           "baseCode": "PCF103",
@@ -14568,38 +13717,6 @@
           "image": "/images/products/PCFDI27.png"
         },
         {
-          "baseCode": "PCFDI30",
-          "variants": [
-            {
-              "code": "PCFDI30/SD",
-              "size": null,
-              "material": "Stainless Steel",
-              "description": "76mm Male (1.5mm Stainless Steel Disc)",
-              "price": 10.3,
-              "persimmonPrice": 8.14,
-              "sizeSuffix": "SD"
-            }
-          ],
-          "name": "76mm Male",
-          "image": null
-        },
-        {
-          "baseCode": "PCFDI31",
-          "variants": [
-            {
-              "code": "PCFDI31/SD",
-              "size": null,
-              "material": "Stainless Steel",
-              "description": "76mm Female (1.5mm Stainless Steel Disc)",
-              "price": 10.3,
-              "persimmonPrice": 8.14,
-              "sizeSuffix": "SD"
-            }
-          ],
-          "name": "76mm Female",
-          "image": null
-        },
-        {
           "baseCode": "PCFDI34",
           "variants": [
             {
@@ -15303,38 +14420,6 @@
           "image": "/images/products/PA108.png"
         },
         {
-          "baseCode": "PA91",
-          "variants": [
-            {
-              "code": "PA91",
-              "size": "1100x2150mm",
-              "material": "10mm Correx",
-              "description": "1100x2150mm Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders, 1x A4 Multi Document Holder & A2 Health and Safety Law Poster)",
-              "price": 132.73,
-              "persimmonPrice": 104.86,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders, 1x A4 Multi Document Holder & A2 Health and Safety Law Poster)",
-          "image": null
-        },
-        {
-          "baseCode": "PA92",
-          "variants": [
-            {
-              "code": "PA92",
-              "size": "1100x2150mm",
-              "material": "10mm Correx",
-              "description": "1100x2150mm Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders & A2 Health and Safety Law Poster)",
-              "price": 123.23,
-              "persimmonPrice": 97.35,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders & A2 Health and Safety Law Poster)",
-          "image": null
-        },
-        {
           "baseCode": "PA96",
           "variants": [
             {
@@ -15577,38 +14662,6 @@
           "image": "/images/products/PA114.png"
         },
         {
-          "baseCode": "PA288L",
-          "variants": [
-            {
-              "code": "PA288L",
-              "size": "1220x2440mm",
-              "material": "10mm Correx",
-              "description": "1220x2440mm Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
-          "image": null
-        },
-        {
-          "baseCode": "PA288P",
-          "variants": [
-            {
-              "code": "PA288P",
-              "size": "2440x1220mm",
-              "material": "10mm Correx",
-              "description": "2440x1220mm Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
-              "price": 120.0,
-              "persimmonPrice": 94.8,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
-          "image": null
-        },
-        {
           "baseCode": "PA602E",
           "variants": [
             {
@@ -15782,22 +14835,6 @@
       "slug": "posters",
       "description": "Health and safety posters providing helpful information and guidance for employees.",
       "products": [
-        {
-          "baseCode": "PCFCCS01",
-          "variants": [
-            {
-              "code": "PCFCCS01",
-              "size": "1220x1220mm",
-              "material": "5mm Foamex",
-              "description": "1220x1220mm Check your PPE (5mm Foamex + Mirror Panel)",
-              "price": 44.0,
-              "persimmonPrice": 34.76,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Check your PPE",
-          "image": null
-        },
         {
           "baseCode": "PCFCCS02",
           "variants": [
@@ -16002,22 +15039,6 @@
           "image": "/images/products/PCFCCS13.png"
         },
         {
-          "baseCode": "PCFCCS14",
-          "variants": [
-            {
-              "code": "PCFCCS14",
-              "size": "800x600mm",
-              "material": "5mm Foamex",
-              "description": "800x600mm Ensure plant operators know know you are there get the thumbs up... (5mm Foamex)",
-              "price": 19.2,
-              "persimmonPrice": 15.17,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Ensure plant operators know know you are there get the thumbs up...",
-          "image": null
-        },
-        {
           "baseCode": "PCFCCS15",
           "variants": [
             {
@@ -16032,22 +15053,6 @@
           ],
           "name": "Save energy switch lights off when you leave (Self-adhesive Vinyl)",
           "image": "/images/products/PCFCCS15.png"
-        },
-        {
-          "baseCode": "PCFCCS17",
-          "variants": [
-            {
-              "code": "PCFCCS17",
-              "size": "297x210mm",
-              "material": "Clipframe",
-              "description": "297x210mm (A4) Safety message of the day (Clipframe)",
-              "price": 10.6,
-              "persimmonPrice": 8.37,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Safety message of the day",
-          "image": null
         },
         {
           "baseCode": "PCFCCS19",
@@ -18061,22 +17066,6 @@
           ],
           "name": "A0 Lockable Notice Board (Felt-back)",
           "image": "/images/products/PCFPFB4.png"
-        },
-        {
-          "baseCode": "PCFSAF02",
-          "variants": [
-            {
-              "code": "PCFSAF02",
-              "size": "594x420mm",
-              "material": "Semi-rigid PVC",
-              "description": "594x420mm (A2) Keep calm and don't swear (Semi-rigid PVC)",
-              "price": 14.4,
-              "persimmonPrice": 11.38,
-              "sizeSuffix": null
-            }
-          ],
-          "name": "Keep calm and don't swear",
-          "image": null
         }
       ],
       "productCount": 11
@@ -19348,49 +18337,6 @@
           "image": "/images/products/PCF145.png"
         },
         {
-          "baseCode": "PCF147",
-          "variants": [
-            {
-              "code": "PCF147/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm All rubbish to be left in skips or bins...(4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF147/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm All rubbish to be left in skips or bins... (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF147/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm All rubbish to be left in skips or bins... (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF147/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm All rubbish to be left in skips or bins... (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "All rubbish to be left in skips or bins...",
-          "image": null
-        },
-        {
           "baseCode": "PCF148",
           "variants": [
             {
@@ -19432,49 +18378,6 @@
           ],
           "name": "Do not ride on hoist",
           "image": "/images/products/PCF148.png"
-        },
-        {
-          "baseCode": "PCF149",
-          "variants": [
-            {
-              "code": "PCF149/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Tree protection order check before you chop! (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF149/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Tree protection order check before you chop! (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF149/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Tree protection order check before you chop! (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF149/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Tree protection order check before you chop! (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Tree protection order check before you chop!",
-          "image": null
         },
         {
           "baseCode": "PCF16",
@@ -19520,31 +18423,6 @@
           "image": "/images/products/PCF16.png"
         },
         {
-          "baseCode": "PCF161",
-          "variants": [
-            {
-              "code": "PCF161/W",
-              "size": "1220x800mm",
-              "material": "4mm Correx",
-              "description": "1220x800mm Health & Safety Notice (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF161/Y",
-              "size": "1800x1220mm",
-              "material": "10mm Correx",
-              "description": "1800x1220mm Health & Safety Notice (10mm Correx)",
-              "price": 61.68,
-              "persimmonPrice": 48.73,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Health & Safety Notice",
-          "image": null
-        },
-        {
           "baseCode": "PCF162",
           "variants": [
             {
@@ -19568,56 +18446,6 @@
           ],
           "name": "Safety on site starts here",
           "image": "/images/products/PCF162.png"
-        },
-        {
-          "baseCode": "PCF163",
-          "variants": [
-            {
-              "code": "PCF163/W",
-              "size": "1220x800mm",
-              "material": "4mm Correx",
-              "description": "1220x800mm For your safety and convenience... (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF163/Y",
-              "size": "1800x1220mm",
-              "material": "10mm Correx",
-              "description": "1800x1220mm For your safety and convenience... (10mm Correx)",
-              "price": 61.68,
-              "persimmonPrice": 48.73,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "For your safety and convenience...",
-          "image": null
-        },
-        {
-          "baseCode": "PCF168",
-          "variants": [
-            {
-              "code": "PCF168/W",
-              "size": "1220x800mm",
-              "material": "4mm Correx",
-              "description": "1220x800mm Have you got the right protection? (4mm Correx)",
-              "price": 19.22,
-              "persimmonPrice": 15.18,
-              "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF168/Y",
-              "size": "1800x1220mm",
-              "material": "10mm Correx",
-              "description": "1800x1220mm Have you got the right protection? (10mm Correx)",
-              "price": 61.68,
-              "persimmonPrice": 48.73,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Have you got the right protection?",
-          "image": null
         },
         {
           "baseCode": "PCF17",
@@ -21538,92 +20366,6 @@
           "image": "/images/products/PCF413.png"
         },
         {
-          "baseCode": "PCF421",
-          "variants": [
-            {
-              "code": "PCF421/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm No toe caps no work (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF421/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm No toe caps no work (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF421/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm No toe caps no work (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF421/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm No toe caps no work (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "No toe caps no work",
-          "image": null
-        },
-        {
-          "baseCode": "PCF44",
-          "variants": [
-            {
-              "code": "PCF44/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm Beware children playing (4mm Correx)",
-              "price": 1.18,
-              "persimmonPrice": 0.93,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF44/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm Beware children playing (4mm Correx)",
-              "price": 2.36,
-              "persimmonPrice": 1.86,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF44/M",
-              "size": "400x600mm",
-              "material": "4mm Correx",
-              "description": "400x600mm Beware children playing (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF44/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm Beware children playing (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
-            }
-          ],
-          "name": "Beware children playing",
-          "image": null
-        },
-        {
           "baseCode": "PCF46",
           "variants": [
             {
@@ -23444,6 +22186,1118 @@
           "image": "/images/products/PCF981.png"
         },
         {
+          "baseCode": "PCF99",
+          "variants": [
+            {
+              "code": "PCF99/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm White on Blue (4mm Correx) to read:",
+              "price": 1.94,
+              "persimmonPrice": 1.53,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF99/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm White on Blue (4mm Correx) to read:",
+              "price": 3.15,
+              "persimmonPrice": 2.49,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF99/H",
+              "size": "1220x1600mm",
+              "material": "10mm Correx",
+              "description": "1220x1600mm White on Blue (10mm Correx) to read:",
+              "price": 66.66,
+              "persimmonPrice": 52.66,
+              "sizeSuffix": "H"
+            },
+            {
+              "code": "PCF99/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm White on Blue (4mm Correx) to read:",
+              "price": 4.91,
+              "persimmonPrice": 3.88,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF99/W",
+              "size": "800x1220mm",
+              "material": "4mm Correx",
+              "description": "800x1220mm White on Blue (4mm Correx) to read:",
+              "price": 20.96,
+              "persimmonPrice": 16.56,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF99/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm White on Blue (4mm Correx) to read:",
+              "price": 10.31,
+              "persimmonPrice": 8.14,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "White on Blue (4mm Correx) to read:",
+          "image": "/images/products/PCF99.png"
+        },
+        {
+          "baseCode": "PCFS13",
+          "variants": [
+            {
+              "code": "PCFS13/M",
+              "size": "600x400mm",
+              "material": "4mm Correx",
+              "description": "600x400mm Please stay on footpaths (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCFS13/Y",
+              "size": "800x600mm",
+              "material": "4mm Correx",
+              "description": "800x600mm Please stay on footpaths (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Please stay on footpaths",
+          "image": "/images/products/PCFS13.png"
+        },
+        {
+          "baseCode": "PCFS15",
+          "variants": [
+            {
+              "code": "PCFS15/M",
+              "size": "600x400mm",
+              "material": "4mm Correx",
+              "description": "600x400mm Please follow Larry's safe path (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCFS15/Y",
+              "size": "800x600mm",
+              "material": "4mm Correx",
+              "description": "800x600mm Please follow Larry's safe path (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Please follow Larry's safe path",
+          "image": "/images/products/PCFS15.png"
+        },
+        {
+          "baseCode": "PCFS16",
+          "variants": [
+            {
+              "code": "PCFS16/M",
+              "size": "600x400mm",
+              "material": "4mm Correx",
+              "description": "600x400mm Please stop, look & listen before crossing (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCFS16/Y",
+              "size": "800x600mm",
+              "material": "4mm Correx",
+              "description": "800x600mm Please stop, look & listen before crossing (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Please stop, look & listen before crossing",
+          "image": "/images/products/PCFS16.png"
+        }
+      ],
+      "productCount": 154
+    },
+    {
+      "name": "for Admin Review",
+      "slug": "for-admin-review",
+      "description": "Products awaiting image review. These may need images added or may no longer be on the current roster.",
+      "products": [
+        {
+          "baseCode": "PA117",
+          "variants": [
+            {
+              "code": "PA117/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm WARNING Site traffic (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "WARNING Site traffic",
+          "image": null
+        },
+        {
+          "baseCode": "PA118",
+          "variants": [
+            {
+              "code": "PA118/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm WARNING Site security on patrol (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "WARNING Site security on patrol",
+          "image": null
+        },
+        {
+          "baseCode": "PA121",
+          "variants": [
+            {
+              "code": "PA121/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Gloves must be worn (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "Gloves must be worn",
+          "image": null
+        },
+        {
+          "baseCode": "PA122",
+          "variants": [
+            {
+              "code": "PA122/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Eye protection must be worn (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "Eye protection must be worn",
+          "image": null
+        },
+        {
+          "baseCode": "PA123",
+          "variants": [
+            {
+              "code": "PA123/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Safety footwear with toecaps & midsoles must be worn (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "Safety footwear with toecaps & midsoles must be worn",
+          "image": null
+        },
+        {
+          "baseCode": "PA124",
+          "variants": [
+            {
+              "code": "PA124/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm KEEP OUT - This company will not be held responsible for any injuries to unauthorised persons on this site (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "KEEP OUT - This company will not be held responsible for any injuries to unauthorised persons on this site",
+          "image": null
+        },
+        {
+          "baseCode": "PA125",
+          "variants": [
+            {
+              "code": "PA125/M",
+              "size": "600x400mm",
+              "material": "4mm Correx",
+              "description": "600x400mm First aid - Name - Location The nearest first aid box is located (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "First aid - Name - Location The nearest first aid box is located",
+          "image": null
+        },
+        {
+          "baseCode": "PA127",
+          "variants": [
+            {
+              "code": "PA127/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Visitors & Deliveries (4mm Correx + Space for Arrow)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "Visitors & Deliveries",
+          "image": null
+        },
+        {
+          "baseCode": "PA288L",
+          "variants": [
+            {
+              "code": "PA288L",
+              "size": "1220x2440mm",
+              "material": "10mm Correx",
+              "description": "1220x2440mm Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+          "image": null
+        },
+        {
+          "baseCode": "PA288P",
+          "variants": [
+            {
+              "code": "PA288P",
+              "size": "2440x1220mm",
+              "material": "10mm Correx",
+              "description": "2440x1220mm Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+          "image": null
+        },
+        {
+          "baseCode": "PA41",
+          "variants": [
+            {
+              "code": "PA41/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm No unauthorised persons beyond this point (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "No unauthorised persons beyond this point",
+          "image": null
+        },
+        {
+          "baseCode": "PA42",
+          "variants": [
+            {
+              "code": "PA42/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm No Contractors Parking (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "No Contractors Parking",
+          "image": null
+        },
+        {
+          "baseCode": "PA43",
+          "variants": [
+            {
+              "code": "PA43/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm No parking available on site (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "No parking available on site",
+          "image": null
+        },
+        {
+          "baseCode": "PA46",
+          "variants": [
+            {
+              "code": "PA46/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm DANGER High voltage Keep away (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "DANGER High voltage Keep away",
+          "image": null
+        },
+        {
+          "baseCode": "PA47",
+          "variants": [
+            {
+              "code": "PA47/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm DANGER Underground live wires (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            }
+          ],
+          "name": "DANGER Underground live wires",
+          "image": null
+        },
+        {
+          "baseCode": "PA48",
+          "variants": [
+            {
+              "code": "PA48/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm DANGER Underground live wires (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            }
+          ],
+          "name": "DANGER Underground live wires",
+          "image": null
+        },
+        {
+          "baseCode": "PA49",
+          "variants": [
+            {
+              "code": "PA49/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Hard hats & safety footwear must be worn on this site (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Hard hats & safety footwear must be worn on this site",
+          "image": null
+        },
+        {
+          "baseCode": "PA91",
+          "variants": [
+            {
+              "code": "PA91",
+              "size": "1100x2150mm",
+              "material": "10mm Correx",
+              "description": "1100x2150mm Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders, 1x A4 Multi Document Holder & A2 Health and Safety Law Poster)",
+              "price": 132.73,
+              "persimmonPrice": 104.86,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders, 1x A4 Multi Document Holder & A2 Health and Safety Law Poster)",
+          "image": null
+        },
+        {
+          "baseCode": "PA92",
+          "variants": [
+            {
+              "code": "PA92",
+              "size": "1100x2150mm",
+              "material": "10mm Correx",
+              "description": "1100x2150mm Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders & A2 Health and Safety Law Poster)",
+              "price": 123.23,
+              "persimmonPrice": 97.35,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Site Safety Notice Board (10mm Correx + 7x A4 (P) Folded Holders & A2 Health and Safety Law Poster)",
+          "image": null
+        },
+        {
+          "baseCode": "PA98",
+          "variants": [
+            {
+              "code": "PA98",
+              "size": "1220x3050mm",
+              "material": "10mm Correx",
+              "description": "1220x3050mm* Canteen Notice Board (10mm Correx + 12x A4 (P) Folded Holders & A2 Health and Safety Law Poster) *Supplied in 3 sections.",
+              "price": 180.86,
+              "persimmonPrice": 142.88,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "* Canteen Notice Board (10mm Correx + 12x A4 (P) Folded Holders & A2 Health and Safety Law Poster) *Supplied in 3 sections.",
+          "image": null
+        },
+        {
+          "baseCode": "PCF147",
+          "variants": [
+            {
+              "code": "PCF147/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm All rubbish to be left in skips or bins...(4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF147/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm All rubbish to be left in skips or bins... (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF147/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm All rubbish to be left in skips or bins... (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF147/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm All rubbish to be left in skips or bins... (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "All rubbish to be left in skips or bins...",
+          "image": null
+        },
+        {
+          "baseCode": "PCF149",
+          "variants": [
+            {
+              "code": "PCF149/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Tree protection order check before you chop! (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF149/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Tree protection order check before you chop! (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF149/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Tree protection order check before you chop! (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF149/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Tree protection order check before you chop! (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Tree protection order check before you chop!",
+          "image": null
+        },
+        {
+          "baseCode": "PCF152",
+          "variants": [
+            {
+              "code": "PCF152/STANDARD",
+              "size": "2440x1220mm",
+              "material": "10mm Correx",
+              "description": "2440x1220mm Site Entrance Multi Sign (10mm Correx)",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": "STANDARD"
+            },
+            {
+              "code": "PCF152/W",
+              "size": "1220x800mm",
+              "material": "4mm Correx",
+              "description": "1220x800mm Site Entrance Multi Sign (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF152/Y",
+              "size": "1800x1220mm",
+              "material": "10mm Correx",
+              "description": "1800x1220mm Site Entrance Multi Sign (10mm Correx)",
+              "price": 61.68,
+              "persimmonPrice": 48.73,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Site Entrance Multi Sign",
+          "image": null
+        },
+        {
+          "baseCode": "PCF161",
+          "variants": [
+            {
+              "code": "PCF161/W",
+              "size": "1220x800mm",
+              "material": "4mm Correx",
+              "description": "1220x800mm Health & Safety Notice (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF161/Y",
+              "size": "1800x1220mm",
+              "material": "10mm Correx",
+              "description": "1800x1220mm Health & Safety Notice (10mm Correx)",
+              "price": 61.68,
+              "persimmonPrice": 48.73,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Health & Safety Notice",
+          "image": null
+        },
+        {
+          "baseCode": "PCF163",
+          "variants": [
+            {
+              "code": "PCF163/W",
+              "size": "1220x800mm",
+              "material": "4mm Correx",
+              "description": "1220x800mm For your safety and convenience... (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF163/Y",
+              "size": "1800x1220mm",
+              "material": "10mm Correx",
+              "description": "1800x1220mm For your safety and convenience... (10mm Correx)",
+              "price": 61.68,
+              "persimmonPrice": 48.73,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "For your safety and convenience...",
+          "image": null
+        },
+        {
+          "baseCode": "PCF168",
+          "variants": [
+            {
+              "code": "PCF168/W",
+              "size": "1220x800mm",
+              "material": "4mm Correx",
+              "description": "1220x800mm Have you got the right protection? (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF168/Y",
+              "size": "1800x1220mm",
+              "material": "10mm Correx",
+              "description": "1800x1220mm Have you got the right protection? (10mm Correx)",
+              "price": 61.68,
+              "persimmonPrice": 48.73,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Have you got the right protection?",
+          "image": null
+        },
+        {
+          "baseCode": "PCF200",
+          "variants": [
+            {
+              "code": "PCF200",
+              "size": null,
+              "material": null,
+              "description": "Compound Sign Pack Main Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+              "price": 266.06,
+              "persimmonPrice": 210.19,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Compound Sign Pack Main Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+          "image": null
+        },
+        {
+          "baseCode": "PCF321",
+          "variants": [
+            {
+              "code": "PCF321/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm This PPE is for visitors only (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF321/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm This PPE is for visitors only (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF321/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm This PPE is for visitors only (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF321/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm This PPE is for visitors only (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "This PPE is for visitors only",
+          "image": null
+        },
+        {
+          "baseCode": "PCF362",
+          "variants": [
+            {
+              "code": "PCF362/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Drivers beware pedestrians crossing ahead (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF362/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Drivers beware pedestrians crossing ahead (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF362/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Drivers beware pedestrians crossing ahead (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF362/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Drivers beware pedestrians crossing ahead (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Drivers beware pedestrians crossing ahead",
+          "image": null
+        },
+        {
+          "baseCode": "PCF373",
+          "variants": [
+            {
+              "code": "PCF373/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Pedestrian crossing ahead (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF373/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Pedestrian crossing ahead (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF373/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Pedestrian crossing ahead (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF373/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Pedestrian crossing ahead (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Pedestrian crossing ahead",
+          "image": null
+        },
+        {
+          "baseCode": "PCF377",
+          "variants": [
+            {
+              "code": "PCF377/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Warning pedestrians have priority (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF377/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Warning pedestrians have priority (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF377/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Warning pedestrians have priority (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF377/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Warning pedestrians have priority (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Warning pedestrians have priority",
+          "image": null
+        },
+        {
+          "baseCode": "PCF421",
+          "variants": [
+            {
+              "code": "PCF421/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm No toe caps no work (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF421/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm No toe caps no work (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF421/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm No toe caps no work (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF421/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm No toe caps no work (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "No toe caps no work",
+          "image": null
+        },
+        {
+          "baseCode": "PCF422",
+          "variants": [
+            {
+              "code": "PCF422/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm No hard hat no work (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF422/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm No hard hat no work (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF422/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm No hard hat no work (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF422/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm No hard hat no work (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "No hard hat no work",
+          "image": null
+        },
+        {
+          "baseCode": "PCF44",
+          "variants": [
+            {
+              "code": "PCF44/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Beware children playing (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF44/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Beware children playing (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF44/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Beware children playing (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF44/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Beware children playing (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Beware children playing",
+          "image": null
+        },
+        {
+          "baseCode": "PCF730",
+          "variants": [
+            {
+              "code": "PCF730/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm EN3 Fire extinguisher colour code (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF730/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm EN3 Fire extinguisher colour code (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF730/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm EN3 Fire extinguisher colour code (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF730/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm EN3 Fire extinguisher colour code (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "EN3 Fire extinguisher colour code",
+          "image": null
+        },
+        {
+          "baseCode": "PCF980",
+          "variants": [
+            {
+              "code": "PCF980/W",
+              "size": "800x1220mm",
+              "material": "4mm Correx",
+              "description": "800x1220mm Site Safety Sign 1 Safety helmets must... (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF980/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Site Safety Sign 1 Safety helmets must... (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Site Safety Sign 1 Safety helmets must...",
+          "image": null
+        },
+        {
+          "baseCode": "PCF982",
+          "variants": [
+            {
+              "code": "PCF982/W",
+              "size": "800x1220mm",
+              "material": "4mm Correx",
+              "description": "800x1220mm Site Safety Sign 3 PPE must be worn... (4mm Correx)",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
+              "sizeSuffix": "W"
+            },
+            {
+              "code": "PCF982/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Site Safety Sign 3 PPE must be worn... (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Site Safety Sign 3 PPE must be worn...",
+          "image": null
+        },
+        {
+          "baseCode": "PCF984",
+          "variants": [
+            {
+              "code": "PCF984/E",
+              "size": "200x300mm",
+              "material": "4mm Correx",
+              "description": "200x300mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
+              "price": 1.18,
+              "persimmonPrice": 0.93,
+              "sizeSuffix": "E"
+            },
+            {
+              "code": "PCF984/F",
+              "size": "300x400mm",
+              "material": "4mm Correx",
+              "description": "300x400mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
+              "price": 2.36,
+              "persimmonPrice": 1.86,
+              "sizeSuffix": "F"
+            },
+            {
+              "code": "PCF984/M",
+              "size": "400x600mm",
+              "material": "4mm Correx",
+              "description": "400x600mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
+              "price": 4.73,
+              "persimmonPrice": 3.74,
+              "sizeSuffix": "M"
+            },
+            {
+              "code": "PCF984/Y",
+              "size": "600x800mm",
+              "material": "4mm Correx",
+              "description": "600x800mm Prevent the spread of Coronavirus wash your hands frequently (4mm Correx)",
+              "price": 9.45,
+              "persimmonPrice": 7.47,
+              "sizeSuffix": "Y"
+            }
+          ],
+          "name": "Prevent the spread of Coronavirus wash your hands frequently",
+          "image": null
+        },
+        {
           "baseCode": "PCF985",
           "variants": [
             {
@@ -23573,65 +23427,166 @@
           "image": null
         },
         {
-          "baseCode": "PCF99",
+          "baseCode": "PCFA108",
           "variants": [
             {
-              "code": "PCF99/E",
-              "size": "200x300mm",
-              "material": "4mm Correx",
-              "description": "200x300mm White on Blue (4mm Correx) to read:",
-              "price": 1.94,
-              "persimmonPrice": 1.53,
-              "sizeSuffix": "E"
-            },
-            {
-              "code": "PCF99/F",
-              "size": "300x400mm",
-              "material": "4mm Correx",
-              "description": "300x400mm White on Blue (4mm Correx) to read:",
-              "price": 3.15,
-              "persimmonPrice": 2.49,
-              "sizeSuffix": "F"
-            },
-            {
-              "code": "PCF99/H",
-              "size": "1220x1600mm",
+              "code": "PCFA108",
+              "size": "2440x1220mm",
               "material": "10mm Correx",
-              "description": "1220x1600mm White on Blue (10mm Correx) to read:",
-              "price": 66.66,
-              "persimmonPrice": 52.66,
-              "sizeSuffix": "H"
+              "description": "2440x1220mm Portrait Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": null
             },
             {
-              "code": "PCF99/M",
-              "size": "400x600mm",
+              "code": "PCFA108/W",
+              "size": "1220x800mm",
               "material": "4mm Correx",
-              "description": "400x600mm White on Blue (4mm Correx) to read:",
-              "price": 4.91,
-              "persimmonPrice": 3.88,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCF99/W",
-              "size": "800x1220mm",
-              "material": "4mm Correx",
-              "description": "800x1220mm White on Blue (4mm Correx) to read:",
-              "price": 20.96,
-              "persimmonPrice": 16.56,
+              "description": "1220x800mm Main Compound Board (4mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+              "price": 19.22,
+              "persimmonPrice": 15.18,
               "sizeSuffix": "W"
-            },
-            {
-              "code": "PCF99/Y",
-              "size": "600x800mm",
-              "material": "4mm Correx",
-              "description": "600x800mm White on Blue (4mm Correx) to read:",
-              "price": 10.31,
-              "persimmonPrice": 8.14,
-              "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Blue (4mm Correx) to read:",
-          "image": "/images/products/PCF99.png"
+          "name": "Portrait Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+          "image": null
+        },
+        {
+          "baseCode": "PCFCCS01",
+          "variants": [
+            {
+              "code": "PCFCCS01",
+              "size": "1220x1220mm",
+              "material": "5mm Foamex",
+              "description": "1220x1220mm Check your PPE (5mm Foamex + Mirror Panel)",
+              "price": 44.0,
+              "persimmonPrice": 34.76,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Check your PPE",
+          "image": null
+        },
+        {
+          "baseCode": "PCFCCS14",
+          "variants": [
+            {
+              "code": "PCFCCS14",
+              "size": "800x600mm",
+              "material": "5mm Foamex",
+              "description": "800x600mm Ensure plant operators know know you are there get the thumbs up... (5mm Foamex)",
+              "price": 19.2,
+              "persimmonPrice": 15.17,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Ensure plant operators know know you are there get the thumbs up...",
+          "image": null
+        },
+        {
+          "baseCode": "PCFCCS17",
+          "variants": [
+            {
+              "code": "PCFCCS17",
+              "size": "297x210mm",
+              "material": "Clipframe",
+              "description": "297x210mm (A4) Safety message of the day (Clipframe)",
+              "price": 10.6,
+              "persimmonPrice": 8.37,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Safety message of the day",
+          "image": null
+        },
+        {
+          "baseCode": "PCFCOV-19-ENT",
+          "variants": [
+            {
+              "code": "PCFCOV-19-ENT",
+              "size": "375x1220mm",
+              "material": "5mm Foamex",
+              "description": "Covid-19 3-part Site Entrance Sign Set (5mm Foamex) Contains:\n1x 375x1220mm Covid-19 Notice\n1x 1840x450mm Attention all visitors\n1x 1840x450mm Help stop the spread",
+              "price": 170.0,
+              "persimmonPrice": 134.3,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Covid-19 3-part Site Entrance Sign Set (5mm Foamex) Contains:\n1x 375x1220mm Covid-19 Notice\n1x 1840x450mm Attention all visitors\n1x 1840x450mm Help stop the spread",
+          "image": null
+        },
+        {
+          "baseCode": "PCFCSSE",
+          "variants": [
+            {
+              "code": "PCFCSSE/SMALL",
+              "size": "610x2440mm",
+              "material": "10mm Correx",
+              "description": "610x2440mm Site Entrance Board (10mm Correx) Site name to read:",
+              "price": 60.0,
+              "persimmonPrice": 47.4,
+              "sizeSuffix": "SMALL"
+            },
+            {
+              "code": "PCFCSSE/STANDARD",
+              "size": "1220x2440mm",
+              "material": "10mm Correx",
+              "description": "1220x2440mm Site Entrance Board (10mm Correx) Site name to read:",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": "STANDARD"
+            }
+          ],
+          "name": "Site Entrance Board (10mm Correx) Site name to read:",
+          "image": null
+        },
+        {
+          "baseCode": "PCFDI30",
+          "variants": [
+            {
+              "code": "PCFDI30/SD",
+              "size": null,
+              "material": "Stainless Steel",
+              "description": "76mm Male (1.5mm Stainless Steel Disc)",
+              "price": 10.3,
+              "persimmonPrice": 8.14,
+              "sizeSuffix": "SD"
+            }
+          ],
+          "name": "76mm Male",
+          "image": null
+        },
+        {
+          "baseCode": "PCFDI31",
+          "variants": [
+            {
+              "code": "PCFDI31/SD",
+              "size": null,
+              "material": "Stainless Steel",
+              "description": "76mm Female (1.5mm Stainless Steel Disc)",
+              "price": 10.3,
+              "persimmonPrice": 8.14,
+              "sizeSuffix": "SD"
+            }
+          ],
+          "name": "76mm Female",
+          "image": null
+        },
+        {
+          "baseCode": "PCFLHS01",
+          "variants": [
+            {
+              "code": "PCFLHS01",
+              "size": "610x1220mm",
+              "material": "10mm Correx",
+              "description": "610x1220mm Building sites are dangerous (10mm Correx)",
+              "price": 40.92,
+              "persimmonPrice": 32.33,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Building sites are dangerous",
+          "image": null
         },
         {
           "baseCode": "PCFLHS02",
@@ -23647,6 +23602,22 @@
             }
           ],
           "name": "Look for Larry & stay safe",
+          "image": null
+        },
+        {
+          "baseCode": "PCFLHS03",
+          "variants": [
+            {
+              "code": "PCFLHS03",
+              "size": "610x1220mm",
+              "material": "10mm Correx",
+              "description": "610x1220mm Look out for danger (10mm Correx)",
+              "price": 40.92,
+              "persimmonPrice": 32.33,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Look out for danger",
           "image": null
         },
         {
@@ -23666,6 +23637,22 @@
           "image": null
         },
         {
+          "baseCode": "PCFLHS11",
+          "variants": [
+            {
+              "code": "PCFLHS11",
+              "size": "1220x2440mm",
+              "material": "10mm Correx",
+              "description": "1220x2440mm Building sites are dangerous (10mm Correx)",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Building sites are dangerous",
+          "image": null
+        },
+        {
           "baseCode": "PCFLHS12",
           "variants": [
             {
@@ -23679,6 +23666,22 @@
             }
           ],
           "name": "Look for Larry & stay safe",
+          "image": null
+        },
+        {
+          "baseCode": "PCFLHS13",
+          "variants": [
+            {
+              "code": "PCFLHS13",
+              "size": "1220x2440mm",
+              "material": "10mm Correx",
+              "description": "1220x2440mm Look out for danger (10mm Correx)",
+              "price": 120.0,
+              "persimmonPrice": 94.8,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Look out for danger",
           "image": null
         },
         {
@@ -23698,82 +23701,87 @@
           "image": null
         },
         {
-          "baseCode": "PCFS13",
+          "baseCode": "PCFSAF02",
           "variants": [
             {
-              "code": "PCFS13/M",
-              "size": "600x400mm",
-              "material": "4mm Correx",
-              "description": "600x400mm Please stay on footpaths (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCFS13/Y",
-              "size": "800x600mm",
-              "material": "4mm Correx",
-              "description": "800x600mm Please stay on footpaths (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
+              "code": "PCFSAF02",
+              "size": "594x420mm",
+              "material": "Semi-rigid PVC",
+              "description": "594x420mm (A2) Keep calm and don't swear (Semi-rigid PVC)",
+              "price": 14.4,
+              "persimmonPrice": 11.38,
+              "sizeSuffix": null
             }
           ],
-          "name": "Please stay on footpaths",
-          "image": "/images/products/PCFS13.png"
+          "name": "Keep calm and don't swear",
+          "image": null
         },
         {
-          "baseCode": "PCFS15",
+          "baseCode": "PCFSB39",
           "variants": [
             {
-              "code": "PCFS15/M",
-              "size": "600x400mm",
-              "material": "4mm Correx",
-              "description": "600x400mm Please follow Larry's safe path (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCFS15/Y",
-              "size": "800x600mm",
-              "material": "4mm Correx",
-              "description": "800x600mm Please follow Larry's safe path (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
+              "code": "PCFSB39/H",
+              "size": "900x400mm",
+              "material": "Scaffold Banner",
+              "description": "900x400mm Safety equipment must be worn on this site (Scaffold Banner)",
+              "price": 22.5,
+              "persimmonPrice": 17.77,
+              "sizeSuffix": "H"
             }
           ],
-          "name": "Please follow Larry's safe path",
-          "image": "/images/products/PCFS15.png"
+          "name": "Safety equipment must be worn on this site",
+          "image": null
         },
         {
-          "baseCode": "PCFS16",
+          "baseCode": "PCFSB48",
           "variants": [
             {
-              "code": "PCFS16/M",
-              "size": "600x400mm",
-              "material": "4mm Correx",
-              "description": "600x400mm Please stop, look & listen before crossing (4mm Correx)",
-              "price": 4.73,
-              "persimmonPrice": 3.74,
-              "sizeSuffix": "M"
-            },
-            {
-              "code": "PCFS16/Y",
-              "size": "800x600mm",
-              "material": "4mm Correx",
-              "description": "800x600mm Please stop, look & listen before crossing (4mm Correx)",
-              "price": 9.45,
-              "persimmonPrice": 7.47,
-              "sizeSuffix": "Y"
+              "code": "PCFSB48/H",
+              "size": "900x1000mm",
+              "material": null,
+              "description": "900x1000mm Company Info. Banner (Scaffold Banner)\n- Tel. Number:\n- Website:",
+              "price": 53.75,
+              "persimmonPrice": 42.46,
+              "sizeSuffix": "H"
             }
           ],
-          "name": "Please stop, look & listen before crossing",
-          "image": "/images/products/PCFS16.png"
+          "name": "Company Info. Banner (Scaffold Banner)\n- Tel. Number:\n- Website:",
+          "image": null
+        },
+        {
+          "baseCode": "PCFSF39",
+          "variants": [
+            {
+              "code": "PCFSF39",
+              "size": "600x400mm",
+              "material": "SCAF-FOLD",
+              "description": "600x400mm Safety equipment must be worn on this site (SCAF-FOLD)",
+              "price": 11.2,
+              "persimmonPrice": 8.85,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Safety equipment must be worn on this site",
+          "image": null
+        },
+        {
+          "baseCode": "PCFTM",
+          "variants": [
+            {
+              "code": "PCFTM",
+              "size": null,
+              "material": "4mm Correx",
+              "description": "Traffic Management Sign Pack (4mm Correx)",
+              "price": 66.22,
+              "persimmonPrice": 52.31,
+              "sizeSuffix": null
+            }
+          ],
+          "name": "Traffic Management Sign Pack",
+          "image": null
         }
       ],
-      "productCount": 154
+      "productCount": 62
     }
   ],
   "totalProducts": 834,

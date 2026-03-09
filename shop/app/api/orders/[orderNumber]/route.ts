@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
+import { isAdminAuthed } from "@/lib/auth";
 
 export async function PATCH(
   req: NextRequest,
   { params }: { params: Promise<{ orderNumber: string }> }
 ) {
+  if (!(await isAdminAuthed())) {
+    return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
+  }
+
   try {
     const { orderNumber } = await params;
     const body = await req.json();
@@ -43,6 +48,10 @@ export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ orderNumber: string }> }
 ) {
+  if (!(await isAdminAuthed())) {
+    return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
+  }
+
   try {
     const { orderNumber } = await params;
 

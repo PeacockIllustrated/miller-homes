@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { sendOrderConfirmation, sendTeamNotification } from "@/lib/email";
+import { isShopAuthed, isAdminAuthed } from "@/lib/auth";
 
 function generateOrderNumber(): string {
   const date = new Date();
@@ -12,6 +13,10 @@ function generateOrderNumber(): string {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: NextRequest) {
+  if (!(await isShopAuthed())) {
+    return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
+  }
+
   try {
     const body = await req.json();
     const { contactName, email, phone, siteName, siteAddress, poNumber, notes, items } = body;
@@ -100,7 +105,9 @@ export async function POST(req: NextRequest) {
 
     if (itemsError) {
       console.error("Supabase items insert error:", itemsError);
-      // Order was created but items failed — log but don't fail the request
+      // Roll back the order so we don't leave an empty shell
+      await supabase.from("psp_orders").delete().eq("id", order.id);
+      return NextResponse.json({ error: "Failed to save order items. Please try again." }, { status: 500 });
     }
 
     // Send emails — awaited so serverless function stays alive until sent
@@ -134,6 +141,10 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
+  if (!(await isAdminAuthed())) {
+    return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
+  }
+
   try {
     const { data: orders, error } = await supabase
       .from("psp_orders")

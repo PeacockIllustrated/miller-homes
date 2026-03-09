@@ -2,6 +2,16 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+/** Escape HTML special characters to prevent injection in email templates */
+function esc(str: string | null | undefined): string {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 interface OrderItem {
   code: string;
   base_code: string | null;
@@ -79,9 +89,9 @@ function itemRowsHtml(items: OrderItem[]): string {
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle">
         <strong style="color:#333">CUSTOM SIGN REQUEST</strong><br/>
-        <span style="color:#666;font-size:12px">${typeLabel} &middot; ${item.custom_data.shape} &middot; ${item.size || ""}</span><br/>
-        <span style="color:#c2410c;font-size:12px">Text: &ldquo;${item.custom_data.textContent}&rdquo;</span>
-        ${item.custom_data.additionalNotes ? `<br/><span style="color:#999;font-size:11px">Notes: ${item.custom_data.additionalNotes}</span>` : ""}
+        <span style="color:#666;font-size:12px">${esc(typeLabel)} &middot; ${esc(item.custom_data.shape)} &middot; ${esc(item.size)}</span><br/>
+        <span style="color:#c2410c;font-size:12px">Text: &ldquo;${esc(item.custom_data.textContent)}&rdquo;</span>
+        ${item.custom_data.additionalNotes ? `<br/><span style="color:#999;font-size:11px">Notes: ${esc(item.custom_data.additionalNotes)}</span>` : ""}
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle">${item.quantity}</td>
       <td style="padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:12px;text-align:right;vertical-align:middle;color:#d97706;font-weight:bold">Quote</td>
@@ -92,11 +102,11 @@ function itemRowsHtml(items: OrderItem[]): string {
       return `
     <tr>
       <td style="padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px">
-        <img src="cid:${imgCode}" alt="${item.code}" width="40" height="40" style="display:block;border-radius:4px;object-fit:contain;background:#f8f8f8" />
+        <img src="cid:${imgCode}" alt="${esc(item.code)}" width="40" height="40" style="display:block;border-radius:4px;object-fit:contain;background:#f8f8f8" />
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle">
-        <strong style="color:#333">${item.code}</strong><br/>
-        <span style="color:#666;font-size:12px">${item.name}${item.size ? ` (${item.size})` : ""}</span>
+        <strong style="color:#333">${esc(item.code)}</strong><br/>
+        <span style="color:#666;font-size:12px">${esc(item.name)}${item.size ? ` (${esc(item.size)})` : ""}</span>
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle">${item.quantity}</td>
       <td style="padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle">&pound;${item.line_total.toFixed(2)}</td>
@@ -138,7 +148,7 @@ export async function sendOrderConfirmation(order: OrderData): Promise<void> {
           <h1 style="color:white;margin:0;font-size:20px">Order Confirmed</h1>
         </div>
         <div style="padding:32px;border:1px solid #eee;border-top:none;border-radius:0 0 12px 12px">
-          <p style="font-size:15px;color:#333">Hi ${order.contactName},</p>
+          <p style="font-size:15px;color:#333">Hi ${esc(order.contactName)},</p>
           <p style="font-size:15px;color:#333">Thank you for your order. Our team will review it and be in touch shortly.</p>
 
           <div style="background:#f8faf9;border-radius:8px;padding:16px 20px;margin:20px 0">
@@ -147,8 +157,8 @@ export async function sendOrderConfirmation(order: OrderData): Promise<void> {
           </div>
 
           <div style="margin:20px 0">
-            <p style="font-size:13px;color:#666;margin:0 0 4px">Site: <strong style="color:#333">${order.siteName}</strong></p>
-            <p style="font-size:13px;color:#666;margin:0">${order.siteAddress}</p>
+            <p style="font-size:13px;color:#666;margin:0 0 4px">Site: <strong style="color:#333">${esc(order.siteName)}</strong></p>
+            <p style="font-size:13px;color:#666;margin:0">${esc(order.siteAddress)}</p>
           </div>
 
           <table style="width:100%;border-collapse:collapse;margin:20px 0">
@@ -192,7 +202,7 @@ export async function sendTeamNotification(order: OrderData): Promise<void> {
   const { error } = await resend.emails.send({
     from: `Persimmon Signage Portal <${fromEmail}>`,
     to: teamEmail,
-    subject: `New Order: ${order.orderNumber} - ${order.siteName}`,
+    subject: `New Order: ${order.orderNumber} - ${esc(order.siteName)}`,
     attachments,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
@@ -208,20 +218,20 @@ export async function sendTeamNotification(order: OrderData): Promise<void> {
           <div style="display:flex;gap:24px;margin-bottom:24px">
             <div>
               <p style="font-size:12px;color:#999;text-transform:uppercase;margin:0 0 4px">Contact</p>
-              <p style="margin:0;font-size:14px"><strong>${order.contactName}</strong></p>
-              <p style="margin:2px 0;font-size:14px;color:#666">${order.email}</p>
-              <p style="margin:0;font-size:14px;color:#666">${order.phone}</p>
+              <p style="margin:0;font-size:14px"><strong>${esc(order.contactName)}</strong></p>
+              <p style="margin:2px 0;font-size:14px;color:#666">${esc(order.email)}</p>
+              <p style="margin:0;font-size:14px;color:#666">${esc(order.phone)}</p>
             </div>
             <div>
               <p style="font-size:12px;color:#999;text-transform:uppercase;margin:0 0 4px">Site</p>
-              <p style="margin:0;font-size:14px"><strong>${order.siteName}</strong></p>
-              <p style="margin:2px 0;font-size:14px;color:#666">${order.siteAddress}</p>
+              <p style="margin:0;font-size:14px"><strong>${esc(order.siteName)}</strong></p>
+              <p style="margin:2px 0;font-size:14px;color:#666">${esc(order.siteAddress)}</p>
             </div>
           </div>
 
-          ${order.poNumber ? `<p style="font-size:14px;color:#666;margin-bottom:16px"><strong>PO Number:</strong> ${order.poNumber}</p>` : ""}
+          ${order.poNumber ? `<p style="font-size:14px;color:#666;margin-bottom:16px"><strong>PO Number:</strong> ${esc(order.poNumber)}</p>` : ""}
 
-          ${order.notes ? `<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-bottom:24px"><p style="margin:0;font-size:13px;color:#c2410c"><strong>Notes:</strong> ${order.notes}</p></div>` : ""}
+          ${order.notes ? `<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-bottom:24px"><p style="margin:0;font-size:13px;color:#c2410c"><strong>Notes:</strong> ${esc(order.notes)}</p></div>` : ""}
 
           <table style="width:100%;border-collapse:collapse;margin:20px 0">
             <thead>

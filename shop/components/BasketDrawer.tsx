@@ -76,6 +76,15 @@ export default function BasketDrawer() {
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-900 truncate">{item.name}</p>
                     <p className="text-xs text-gray-500">{item.customSign ? `${item.customSign.signType.charAt(0).toUpperCase() + item.customSign.signType.slice(1).replace("-", " ")} Sign` : item.code}{item.size ? ` \u2022 ${item.size}` : ""}</p>
+                    {item.customFieldValues && item.customFieldValues.length > 0 && (
+                      <div className="mt-0.5">
+                        {item.customFieldValues.map((f) => (
+                          <p key={f.key} className="text-[11px] text-persimmon-green truncate">
+                            {f.label}: <span className="text-gray-500">{f.value}</span>
+                          </p>
+                        ))}
+                      </div>
+                    )}
                     <div className="flex items-center justify-between mt-1.5">
                       <div className="flex items-center gap-1">
                         <button

@@ -58,6 +58,15 @@ export default function BasketPage() {
               <p className="text-sm text-gray-400 mt-0.5">
                 {item.customSign ? `${item.customSign.signType.charAt(0).toUpperCase() + item.customSign.signType.slice(1).replace("-", " ")} Sign` : item.code}{item.size ? ` \u2022 ${item.size}` : ""}{item.material ? ` \u2022 ${item.material}` : ""}
               </p>
+              {item.customFieldValues && item.customFieldValues.length > 0 && (
+                <div className="mt-1 space-y-0.5">
+                  {item.customFieldValues.map((f) => (
+                    <p key={f.key} className="text-xs text-persimmon-green">
+                      {f.label}: <span className="text-gray-600">{f.value}</span>
+                    </p>
+                  ))}
+                </div>
+              )}
               {item.customSign ? (
                 <p className="text-amber-600 font-semibold mt-1.5 text-sm">Quote on request</p>
               ) : (

@@ -10,11 +10,17 @@ export interface Variant {
   sizeSuffix: string | null;
 }
 
+export interface CustomField {
+  label: string;
+  key: string;
+}
+
 export interface Product {
   baseCode: string;
   name: string;
   image: string | null;
   variants: Variant[];
+  customFields?: CustomField[];
 }
 
 export interface Category {

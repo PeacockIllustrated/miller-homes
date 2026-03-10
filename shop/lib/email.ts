@@ -22,10 +22,12 @@ interface OrderItem {
   quantity: number;
   line_total: number;
   custom_data?: {
-    signType: string;
-    textContent: string;
-    shape: string;
-    additionalNotes: string;
+    type?: string;
+    signType?: string;
+    textContent?: string;
+    shape?: string;
+    additionalNotes?: string;
+    fields?: Array<{ label: string; key: string; value: string }>;
   } | null;
 }
 
@@ -49,7 +51,7 @@ function buildImageAttachments(items: OrderItem[], siteUrl: string) {
   const seen = new Set<string>();
   return items
     .map((item) => {
-      if (item.custom_data) return null; // No CID image for custom signs
+      if (item.custom_data?.signType) return null; // No CID image for custom sign requests
       const imgCode = (item.base_code || item.code.replace(/\/.*$/, "")).replace(/\//g, "_");
       if (seen.has(imgCode)) return null;
       seen.add(imgCode);
@@ -77,7 +79,8 @@ const SIGN_TYPE_COLORS: Record<string, { bg: string; fg: string }> = {
 function itemRowsHtml(items: OrderItem[]): string {
   return items
     .map((item) => {
-      if (item.custom_data) {
+      // Custom sign request (price 0, quote on request)
+      if (item.custom_data && item.custom_data.signType) {
         const colors = SIGN_TYPE_COLORS[item.custom_data.signType] || { bg: "#666", fg: "#FFF" };
         const typeLabel = item.custom_data.signType.charAt(0).toUpperCase() + item.custom_data.signType.slice(1).replace("-", " ");
         return `
@@ -98,7 +101,13 @@ function itemRowsHtml(items: OrderItem[]): string {
     </tr>`;
       }
 
+      // Standard item (with optional custom field values)
       const imgCode = (item.base_code || item.code.replace(/\/.*$/, "")).replace(/\//g, "_");
+      const customFieldsHtml = item.custom_data?.fields
+        ? (item.custom_data.fields as Array<{ label: string; key: string; value: string }>)
+            .map((f) => `<br/><span style="color:#00474a;font-size:11px">${esc(f.label)}: <span style="color:#666">${esc(f.value)}</span></span>`)
+            .join("")
+        : "";
       return `
     <tr>
       <td style="padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px">
@@ -106,7 +115,7 @@ function itemRowsHtml(items: OrderItem[]): string {
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle">
         <strong style="color:#333">${esc(item.code)}</strong><br/>
-        <span style="color:#666;font-size:12px">${esc(item.name)}${item.size ? ` (${esc(item.size)})` : ""}</span>
+        <span style="color:#666;font-size:12px">${esc(item.name)}${item.size ? ` (${esc(item.size)})` : ""}</span>${customFieldsHtml}
       </td>
       <td style="padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle">${item.quantity}</td>
       <td style="padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle">&pound;${item.line_total.toFixed(2)}</td>

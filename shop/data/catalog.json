@@ -618,7 +618,21 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Setup Pack\nMain Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:\nTraffic & Environmental Management Plan\n- Site Name:",
+          "name": "Setup Pack\nMain Compound Board: Portrait/Landscape\nTraffic & Environmental Management Plan",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Site Managers Name",
+              "key": "site_managers_name"
+            },
+            {
+              "label": "Emergency Contact",
+              "key": "emergency_contact"
+            }
+          ],
           "image": "/images/products/PCFSP.png"
         }
       ],
@@ -1045,7 +1059,21 @@
               "sizeSuffix": "W"
             }
           ],
-          "name": "Landscape Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+          "name": "Landscape Main Compound Board (10mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Site Managers Name",
+              "key": "site_managers_name"
+            },
+            {
+              "label": "Emergency Contact",
+              "key": "emergency_contact"
+            }
+          ],
           "image": "/images/products/PCFA107.png"
         },
         {
@@ -2320,7 +2348,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Green) (Sheet of 10) White on Green to read:",
+          "name": "Custom Helmet Label (Green) (Sheet of 10) White on Green",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL94_10.png"
         },
         {
@@ -2336,7 +2370,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Green) (Sheet of 100) White on Green to read:",
+          "name": "Custom Helmet Label (Green) (Sheet of 100) White on Green",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL94_100.png"
         },
         {
@@ -2352,7 +2392,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Green) (Sheet of 250) White on Green to read:",
+          "name": "Custom Helmet Label (Green) (Sheet of 250) White on Green",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL94_250.png"
         },
         {
@@ -2368,7 +2414,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Yellow) (Sheet of 10) Black on Yellow to read:",
+          "name": "Custom Helmet Label (Yellow) (Sheet of 10) Black on Yellow",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL95_10.png"
         },
         {
@@ -2384,7 +2436,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Yellow) (Sheet of 100) Black on Yellow to read:",
+          "name": "Custom Helmet Label (Yellow) (Sheet of 100) Black on Yellow",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL95_100.png"
         },
         {
@@ -2400,7 +2458,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Yellow) (Sheet of 250) Black on Yellow to read:",
+          "name": "Custom Helmet Label (Yellow) (Sheet of 250) Black on Yellow",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL95_250.png"
         },
         {
@@ -2416,7 +2480,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Black) (Sheet of 10) Black on White to read:",
+          "name": "Custom Helmet Label (Black) (Sheet of 10) Black on White",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL96_10.png"
         },
         {
@@ -2432,7 +2502,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Black) (Sheet of 100) Black on White to read:",
+          "name": "Custom Helmet Label (Black) (Sheet of 100) Black on White",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL96_100.png"
         },
         {
@@ -2448,7 +2524,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Black) (Sheet of 250) Black on White to read:",
+          "name": "Custom Helmet Label (Black) (Sheet of 250) Black on White",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL96_250.png"
         },
         {
@@ -2464,7 +2546,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Red) (Sheet of 10) White on Red to read:",
+          "name": "Custom Helmet Label (Red) (Sheet of 10) White on Red",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL98_10.png"
         },
         {
@@ -2480,7 +2568,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Red) (Sheet of 100) White on Red to read:",
+          "name": "Custom Helmet Label (Red) (Sheet of 100) White on Red",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL98_100.png"
         },
         {
@@ -2496,7 +2590,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Red) (Sheet of 250) White on Red to read:",
+          "name": "Custom Helmet Label (Red) (Sheet of 250) White on Red",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL98_250.png"
         },
         {
@@ -2512,7 +2612,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Blue) (Sheet of 10) White on Blue to read:",
+          "name": "Custom Helmet Label (Blue) (Sheet of 10) White on Blue",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL99_10.png"
         },
         {
@@ -2528,7 +2634,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Blue) (Sheet of 100) White on Blue to read:",
+          "name": "Custom Helmet Label (Blue) (Sheet of 100) White on Blue",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL99_100.png"
         },
         {
@@ -2544,7 +2656,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Helmet Label (Blue) (Sheet of 250) White on Blue to read:",
+          "name": "Custom Helmet Label (Blue) (Sheet of 250) White on Blue",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHL99_250.png"
         }
       ],
@@ -7160,7 +7278,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Orange) (Pack of 10) Black on Orange to read:",
+          "name": "Custom Mark-em (Orange) (Pack of 10) Black on Orange",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK93_10.png"
         },
         {
@@ -7176,7 +7300,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Yellow) (Pack of 10) Black on Yellow to read:",
+          "name": "Custom Mark-em (Yellow) (Pack of 10) Black on Yellow",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK95_10.png"
         },
         {
@@ -7192,7 +7322,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Black) (Pack of 10) Black on White to read:",
+          "name": "Custom Mark-em (Black) (Pack of 10) Black on White",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK96_10.png"
         },
         {
@@ -7208,7 +7344,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Green) (Pack of 10) White on Green to read:",
+          "name": "Custom Mark-em (Green) (Pack of 10) White on Green",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK97_10.png"
         },
         {
@@ -7224,7 +7366,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Red) (Pack of 10) White on Red to read:",
+          "name": "Custom Mark-em (Red) (Pack of 10) White on Red",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK98_10.png"
         },
         {
@@ -7240,7 +7388,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom Mark-em (Blue) (Pack of 10) White on Blue to read:",
+          "name": "Custom Mark-em (Blue) (Pack of 10) White on Blue",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFMK99_10.png"
         },
         {
@@ -8607,7 +8761,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "Black on White (Scaffold Banner) to read:",
+          "name": "Black on White (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB32.png"
         },
         {
@@ -8623,7 +8783,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "White on Blue + Symbol (Scaffold Banner) to read:",
+          "name": "White on Blue + Symbol (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB33.png"
         },
         {
@@ -8639,7 +8805,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "Black on Yellow + Symbol (Scaffold Banner) to read:",
+          "name": "Black on Yellow + Symbol (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB34.png"
         },
         {
@@ -8655,7 +8827,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "White on Red + Symbol (Scaffold Banner) to read:",
+          "name": "White on Red + Symbol (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB35.png"
         },
         {
@@ -8735,7 +8913,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "White on Green (Scaffold Banner) to read:",
+          "name": "White on Green (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB94.png"
         },
         {
@@ -8751,7 +8935,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "Black on Yellow (Scaffold Banner) to read:",
+          "name": "Black on Yellow (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB95.png"
         },
         {
@@ -8767,7 +8957,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "White on Red (Scaffold Banner) to read:",
+          "name": "White on Red (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB98.png"
         },
         {
@@ -8783,7 +8979,13 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "White on Blue (Scaffold Banner) to read:",
+          "name": "White on Blue (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSB99.png"
         },
         {
@@ -9103,7 +9305,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Black) Black on White to read:",
+          "name": "Custom SCAF-FOLD (Black) Black on White",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF32.png"
         },
         {
@@ -9119,7 +9327,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Blue) White on Blue + Symbol to read:",
+          "name": "Custom SCAF-FOLD (Blue) White on Blue + Symbol",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF33.png"
         },
         {
@@ -9135,7 +9349,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Yellow) Black on Yellow + Symbol to read:",
+          "name": "Custom SCAF-FOLD (Yellow) Black on Yellow + Symbol",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF34.png"
         },
         {
@@ -9151,7 +9371,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Red) White on Red + Symbol to read:",
+          "name": "Custom SCAF-FOLD (Red) White on Red + Symbol",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF35.png"
         },
         {
@@ -9295,7 +9521,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Green) White on Green to read:",
+          "name": "Custom SCAF-FOLD (Green) White on Green",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF94.png"
         },
         {
@@ -9311,7 +9543,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Yellow) Black on Yellow to read:",
+          "name": "Custom SCAF-FOLD (Yellow) Black on Yellow",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF95.png"
         },
         {
@@ -9327,7 +9565,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Red) White on Red to read:",
+          "name": "Custom SCAF-FOLD (Red) White on Red",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF98.png"
         },
         {
@@ -9343,7 +9587,13 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Custom SCAF-FOLD (Blue) White on Blue to read:",
+          "name": "Custom SCAF-FOLD (Blue) White on Blue",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFSF99.png"
         }
       ],
@@ -10195,7 +10445,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Reserved parking for (4mm Correx) Name:",
+          "name": "Reserved parking for (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF310.png"
         },
         {
@@ -11433,7 +11689,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "600mm (Dia.) Vehicles exceeding gross weight prohibited (3mm Dibond + Cone Fixing) to read:",
+          "name": "600mm (Dia.) Vehicles exceeding gross weight prohibited (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR70_6221.png"
         },
         {
@@ -11535,7 +11797,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "Black Text and Border (3mm Dibond + Cone Fixing) to read:",
+          "name": "Black Text and Border (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR70_9999.png"
         },
         {
@@ -11875,7 +12143,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "600mm (Tri.) Maximum headroom (3mm Dibond + Cone Fixing) to read:",
+          "name": "600mm (Tri.) Maximum headroom (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR80_530.png"
         },
         {
@@ -12283,7 +12557,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "600mm (Tri.) Black Text with Red Border (3mm Dibond + Cone Fixing) to read:",
+          "name": "600mm (Tri.) Black Text with Red Border (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR80_9999.png"
         },
         {
@@ -12317,7 +12597,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "Black on White (3mm Dibond + Cone Fixing) to read:",
+          "name": "Black on White (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR86_9999.png"
         },
         {
@@ -12521,7 +12807,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "White on Blue (3mm Dibond + Cone Fixing) to read:",
+          "name": "White on Blue (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR87_9999.png"
         },
         {
@@ -12929,7 +13221,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "White on Red (3mm Dibond + Cone Fixing) to read:",
+          "name": "White on Red (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR88_9999.png"
         },
         {
@@ -13099,7 +13397,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "Black on Yellow (3mm Dibond + Cone Fixing) to read:",
+          "name": "Black on Yellow (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR89_9999.png"
         },
         {
@@ -13507,7 +13811,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "White on Red (3mm Dibond + Cone Fixing) to read:",
+          "name": "White on Red (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR90_9999.png"
         },
         {
@@ -13616,7 +13926,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "Black on Yellow (3mm Dibond + Cone Fixing) to read:",
+          "name": "Black on Yellow (3mm Dibond + Cone Fixing)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR91_9999.png"
         },
         {
@@ -13641,7 +13957,13 @@
               "sizeSuffix": "TF"
             }
           ],
-          "name": "Black Text and Border (Zintec Plate) to read:",
+          "name": "Black Text and Border (Zintec Plate)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFR96_SUPP.png"
         }
       ],
@@ -14146,7 +14468,13 @@
               "sizeSuffix": "XLARGE"
             }
           ],
-          "name": "Traffic & Environmental Management Plan (Magnetic Dry Wipe Board + Magnetic Symbol Sheet) Site name to read:",
+          "name": "Traffic & Environmental Management Plan (Magnetic Dry Wipe Board + Magnetic Symbol Sheet) Site name",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFDWTP.png"
         },
         {
@@ -14189,7 +14517,13 @@
               "sizeSuffix": "XLARGE"
             }
           ],
-          "name": "Traffic & Environmental Management Plan (Magnetic Dry Wipe Board + Pre-cut Magnetic Symbols in Storage Box) Site name to read:",
+          "name": "Traffic & Environmental Management Plan (Magnetic Dry Wipe Board + Pre-cut Magnetic Symbols in Storage Box) Site name",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFDWTP2.png"
         },
         {
@@ -14643,6 +14977,12 @@
             }
           ],
           "name": "For Sale - Property Number (Blank Box) (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Address",
+              "key": "site_address"
+            }
+          ],
           "image": "/images/products/PA113.png"
         },
         {
@@ -14781,7 +15121,17 @@
               "sizeSuffix": null
             }
           ],
-          "name": "High Risk Activities/Hazards Board (10mm Correx w/ 7x YES/NO Sliders)\n- Site Manager Name:\n- Phone Numbe",
+          "name": "High Risk Activities/Hazards Board (10mm Correx w/ 7x YES/NO Sliders)",
+          "customFields": [
+            {
+              "label": "Site Manager Name",
+              "key": "site_manager_name"
+            },
+            {
+              "label": "Phone Number",
+              "key": "phone_number"
+            }
+          ],
           "image": "/images/products/PA94.png"
         },
         {
@@ -14939,7 +15289,17 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Development Info Banner (PVC Banner + Hems & Eyelets)\n- Site Name:\n- Website:",
+          "name": "Development Info Banner (PVC Banner + Hems & Eyelets)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Website",
+              "key": "website"
+            }
+          ],
           "image": "/images/products/PCFCCS06.png"
         },
         {
@@ -16117,7 +16477,13 @@
               "sizeSuffix": "D"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (3mm Dibond) to read:",
+          "name": "Branded Hoarding Sign with Site Name (3mm Dibond)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS051.png"
         },
         {
@@ -16133,7 +16499,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5) to read:",
+          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS055.png"
         },
         {
@@ -16149,7 +16521,13 @@
               "sizeSuffix": "D"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (3mm Dibond) to read:",
+          "name": "Branded Hoarding Sign with Site Name (3mm Dibond)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS061.png"
         },
         {
@@ -16165,7 +16543,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5) to read:",
+          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS065.png"
         },
         {
@@ -16181,7 +16565,13 @@
               "sizeSuffix": "D"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (3mm Dibond) to read:",
+          "name": "Branded Hoarding Sign with Site Name (3mm Dibond)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS071.png"
         },
         {
@@ -16197,7 +16587,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5) to read:",
+          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS075.png"
         },
         {
@@ -16213,7 +16609,13 @@
               "sizeSuffix": "D"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (3mm Dibond) to read:",
+          "name": "Branded Hoarding Sign with Site Name (3mm Dibond)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS081.png"
         },
         {
@@ -16229,7 +16631,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5) to read:",
+          "name": "Branded Hoarding Sign with Site Name (4mm Correx) (Pack of 5)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCFHS085.png"
         },
         {
@@ -16254,7 +16662,13 @@
               "sizeSuffix": "STANDARD"
             }
           ],
-          "name": "Site Entrance Board (10mm Correx) Site Name:",
+          "name": "Site Entrance Board (10mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            }
+          ],
           "image": "/images/products/PCFHSE.png"
         },
         {
@@ -16310,7 +16724,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Temporary Street Name Plate (4mm Correx) to read:",
+          "name": "Temporary Street Name Plate (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF614.png"
         },
         {
@@ -16326,7 +16746,13 @@
               "sizeSuffix": "C"
             }
           ],
-          "name": "Temporary Street Name Plate No Through Road (4mm Correx) to read:",
+          "name": "Temporary Street Name Plate No Through Road (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF614T.png"
         },
         {
@@ -16713,7 +17139,17 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Custom Position/Name Sign (4mm Correx)\n- Position:\n- Name:",
+          "name": "Custom Position/Name Sign (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Position",
+              "key": "position"
+            },
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF170.png"
         },
         {
@@ -16774,7 +17210,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Warning/Prohibition Sign (4mm Correx) to read:",
+          "name": "Warning/Prohibition Sign (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF995.png"
         },
         {
@@ -16835,7 +17277,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Prohibition/Mandatory Sign (4mm Correx) to read:",
+          "name": "Prohibition/Mandatory Sign (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF998.png"
         },
         {
@@ -16896,7 +17344,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Warning/Mandatory Sign (4mm Correx) to read:",
+          "name": "Warning/Mandatory Sign (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF999.png"
         }
       ],
@@ -17745,7 +18199,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Senior Site Manager (4mm Correx) Name:",
+          "name": "Senior Site Manager (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF11.png"
         },
         {
@@ -17806,7 +18266,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Green on White (4mm Correx) to read:",
+          "name": "Green on White (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF114.png"
         },
         {
@@ -17867,7 +18333,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Black on White (4mm Correx) to read:",
+          "name": "Black on White (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF115.png"
         },
         {
@@ -17928,7 +18400,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Red on White (4mm Correx) to read:",
+          "name": "Red on White (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF118.png"
         },
         {
@@ -17989,7 +18467,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Blue on White (4mm Correx) to read:",
+          "name": "Blue on White (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF119.png"
         },
         {
@@ -18032,7 +18516,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Site Manager (4mm Correx) Name:",
+          "name": "Site Manager (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF12.png"
         },
         {
@@ -18290,7 +18780,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Building Inspector (4mm Correx) Name:",
+          "name": "Building Inspector (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF143.png"
         },
         {
@@ -18530,7 +19026,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Contracts Manager (4mm Correx) Name:",
+          "name": "Contracts Manager (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF171.png"
         },
         {
@@ -18573,7 +19075,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Surveyor (4mm Correx) Name:",
+          "name": "Surveyor (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF172.png"
         },
         {
@@ -18616,7 +19124,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Clerk of Works (4mm Correx) Name:",
+          "name": "Clerk of Works (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF173.png"
         },
         {
@@ -18659,7 +19173,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Project Manager (4mm Correx) Name:",
+          "name": "Project Manager (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF174.png"
         },
         {
@@ -18702,7 +19222,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Site Agent (4mm Correx) Name:",
+          "name": "Site Agent (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF175.png"
         },
         {
@@ -18745,7 +19271,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Fork-lift Driver (4mm Correx) Name:",
+          "name": "Fork-lift Driver (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF176.png"
         },
         {
@@ -18788,7 +19320,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Assistant Site Manager (4mm Correx) Name:",
+          "name": "Assistant Site Manager (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF177.png"
         },
         {
@@ -18831,7 +19369,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "NHBC Inspector (4mm Correx) Name:",
+          "name": "NHBC Inspector (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Name",
+              "key": "name"
+            }
+          ],
           "image": "/images/products/PCF178.png"
         },
         {
@@ -19021,7 +19565,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Black on Yellow + Symbol (4mm Correx) to read:",
+          "name": "Black on Yellow + Symbol (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF195.png"
         },
         {
@@ -19082,7 +19632,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Red + Symbol (4mm Correx) to read:",
+          "name": "White on Red + Symbol (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF198.png"
         },
         {
@@ -19143,7 +19699,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Blue + Symbol (4mm Correx) to read:",
+          "name": "White on Blue + Symbol (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF199.png"
         },
         {
@@ -20233,7 +20795,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Plot number (4mm Correx) to read:",
+          "name": "Plot number (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF410.png"
         },
         {
@@ -21064,7 +21632,13 @@
               "sizeSuffix": "DP"
             }
           ],
-          "name": "Site Name Directional Sign Left (4mm Correx) to read:",
+          "name": "Site Name Directional Sign Left (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF611.png"
         },
         {
@@ -21089,7 +21663,13 @@
               "sizeSuffix": "DP"
             }
           ],
-          "name": "Site Name Directional Sign Right (4mm Correx) to read:",
+          "name": "Site Name Directional Sign Right (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF612.png"
         },
         {
@@ -21114,7 +21694,13 @@
               "sizeSuffix": "DP"
             }
           ],
-          "name": "Site Name Directional Sign Ahead (4mm Correx) to read:",
+          "name": "Site Name Directional Sign Ahead (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF613.png"
         },
         {
@@ -21820,7 +22406,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Green (4mm Correx) to read:",
+          "name": "White on Green (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF94.png"
         },
         {
@@ -21881,7 +22473,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "Black on Yellow (4mm Correx) to read:",
+          "name": "Black on Yellow (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF95.png"
         },
         {
@@ -22157,7 +22755,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Red (4mm Correx) to read:",
+          "name": "White on Red (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF98.png"
         },
         {
@@ -22243,7 +22847,13 @@
               "sizeSuffix": "Y"
             }
           ],
-          "name": "White on Blue (4mm Correx) to read:",
+          "name": "White on Blue (4mm Correx)",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": "/images/products/PCF99.png"
         },
         {
@@ -22470,7 +23080,17 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+          "name": "Main Compound Board (10mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Emergency Contact Number",
+              "key": "emergency_contact_number"
+            }
+          ],
           "image": null
         },
         {
@@ -22486,7 +23106,17 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Main Compound Board (10mm Correx) to read:\n- Site Name:\n- Emergency Contact Number:\n*For Persimmon Severn Valley sites only.",
+          "name": "Main Compound Board (10mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Emergency Contact Number",
+              "key": "emergency_contact_number"
+            }
+          ],
           "image": null
         },
         {
@@ -22857,7 +23487,21 @@
               "sizeSuffix": null
             }
           ],
-          "name": "Compound Sign Pack Main Compound Board: Portrait/Landscape\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+          "name": "Compound Sign Pack Main Compound Board: Portrait/Landscape",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Site Managers Name",
+              "key": "site_managers_name"
+            },
+            {
+              "label": "Emergency Contact",
+              "key": "emergency_contact"
+            }
+          ],
           "image": null
         },
         {
@@ -23276,7 +23920,21 @@
               "sizeSuffix": "W"
             }
           ],
-          "name": "Portrait Main Compound Board (10mm Correx)\n- Site Name:\n- Site Managers Name:\n- Emergency Contact:",
+          "name": "Portrait Main Compound Board (10mm Correx)",
+          "customFields": [
+            {
+              "label": "Site Name",
+              "key": "site_name"
+            },
+            {
+              "label": "Site Managers Name",
+              "key": "site_managers_name"
+            },
+            {
+              "label": "Emergency Contact",
+              "key": "emergency_contact"
+            }
+          ],
           "image": null
         },
         {
@@ -23349,7 +24007,13 @@
               "sizeSuffix": "STANDARD"
             }
           ],
-          "name": "Site Entrance Board (10mm Correx) Site name to read:",
+          "name": "Site Entrance Board (10mm Correx) Site name",
+          "customFields": [
+            {
+              "label": "Custom Text",
+              "key": "custom_text"
+            }
+          ],
           "image": null
         },
         {
@@ -23557,7 +24221,17 @@
               "sizeSuffix": "H"
             }
           ],
-          "name": "Company Info. Banner (Scaffold Banner)\n- Tel. Number:\n- Website:",
+          "name": "Company Info. Banner (Scaffold Banner)",
+          "customFields": [
+            {
+              "label": "Tel. Number",
+              "key": "tel_number"
+            },
+            {
+              "label": "Website",
+              "key": "website"
+            }
+          ],
           "image": null
         },
         {

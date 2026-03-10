@@ -34,18 +34,40 @@ export async function POST(req: NextRequest) {
 
     // Recalculate totals server-side (never trust client)
     let subtotal = 0;
-    const validatedItems = items.map((item: { code: string; baseCode?: string; name: string; size?: string; material?: string; description?: string; price: number; quantity: number; customSign?: { signType: string; textContent: string; shape: string; additionalNotes: string } }) => {
+    const validatedItems = items.map((item: { code: string; baseCode?: string; name: string; size?: string; material?: string; description?: string; price: number; quantity: number; customSign?: { signType: string; textContent: string; shape: string; additionalNotes: string }; customFieldValues?: Array<{ label: string; key: string; value: string }> }) => {
       const price = Math.round(Number(item.price) * 100) / 100;
       const quantity = Math.max(1, Math.min(9999, Math.floor(Number(item.quantity))));
-      const isCustom = !!item.customSign;
-      if (!isCustom && (price <= 0 || price > 100000)) {
+      const isCustomSign = !!item.customSign;
+      if (!isCustomSign && (price <= 0 || price > 100000)) {
         throw new Error(`Invalid price for item ${item.code}`);
       }
-      if (isCustom && price !== 0) {
+      if (isCustomSign && price !== 0) {
         throw new Error(`Custom sign items must have price 0`);
       }
       const lineTotal = Math.round(price * quantity * 100) / 100;
       subtotal += lineTotal;
+
+      // Build custom_data JSONB — either custom sign request or custom field values
+      let custom_data = null;
+      if (item.customSign) {
+        custom_data = {
+          type: "custom_sign" as const,
+          signType: String(item.customSign.signType),
+          textContent: String(item.customSign.textContent),
+          shape: String(item.customSign.shape),
+          additionalNotes: String(item.customSign.additionalNotes || ""),
+        };
+      } else if (item.customFieldValues && item.customFieldValues.length > 0) {
+        custom_data = {
+          type: "custom_fields" as const,
+          fields: item.customFieldValues.map((f) => ({
+            label: String(f.label),
+            key: String(f.key),
+            value: String(f.value),
+          })),
+        };
+      }
+
       return {
         code: String(item.code),
         base_code: item.baseCode ? String(item.baseCode) : null,
@@ -55,12 +77,7 @@ export async function POST(req: NextRequest) {
         price,
         quantity,
         line_total: lineTotal,
-        custom_data: item.customSign ? {
-          signType: String(item.customSign.signType),
-          textContent: String(item.customSign.textContent),
-          shape: String(item.customSign.shape),
-          additionalNotes: String(item.customSign.additionalNotes || ""),
-        } : null,
+        custom_data,
       };
     });
 

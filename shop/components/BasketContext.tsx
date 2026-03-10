@@ -9,6 +9,12 @@ export interface CustomSignData {
   additionalNotes: string;
 }
 
+export interface CustomFieldValue {
+  label: string;
+  key: string;
+  value: string;
+}
+
 export interface BasketItem {
   code: string;
   baseCode: string;
@@ -20,6 +26,7 @@ export interface BasketItem {
   quantity: number;
   image: string | null;
   customSign?: CustomSignData;
+  customFieldValues?: CustomFieldValue[];
 }
 
 interface BasketContextType {

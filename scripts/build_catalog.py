@@ -223,6 +223,68 @@ CATEGORY_DEFINITIONS = [
 ]
 
 
+def detect_custom_fields(text):
+    """Parse custom field requirements from product name/description."""
+    fields = []
+
+    # Pattern 1: Multiline "- Field:" entries (require newline before -)
+    multiline_fields = re.findall(r'\n-\s*([^:\n]+):', text)
+    if multiline_fields:
+        for f in multiline_fields:
+            label = f.strip()
+            key = re.sub(r'[^a-z0-9]+', '_', label.lower()).strip('_')
+            if label and key:
+                entry = {'label': label, 'key': key}
+                if entry not in fields:
+                    fields.append(entry)
+        # Check for truncated last field (no trailing colon, e.g. "Phone Numbe")
+        trailing = re.search(r'\n-\s*([A-Za-z][^:\n]{2,})\s*$', text)
+        if trailing:
+            label = trailing.group(1).strip()
+            if label == 'Phone Numbe':
+                label = 'Phone Number'
+            key = re.sub(r'[^a-z0-9]+', '_', label.lower()).strip('_')
+            entry = {'label': label, 'key': key}
+            if entry not in fields:
+                fields.append(entry)
+        return fields
+
+    # Pattern 2: Ends with "Site address to read:"
+    if re.search(r'Site address to read:\s*$', text, re.IGNORECASE):
+        return [{'label': 'Site Address', 'key': 'site_address'}]
+
+    # Pattern 3: Ends with "Site Name:" (inline)
+    if re.search(r'Site Name:\s*$', text, re.IGNORECASE):
+        return [{'label': 'Site Name', 'key': 'site_name'}]
+
+    # Pattern 4: Ends with "Name:" (e.g. "Site Manager (4mm Correx) Name:")
+    if text.rstrip().endswith('Name:'):
+        return [{'label': 'Name', 'key': 'name'}]
+
+    # Pattern 5: Ends with "to read:" (generic custom text)
+    if re.search(r'to read:\s*$', text, re.IGNORECASE):
+        return [{'label': 'Custom Text', 'key': 'custom_text'}]
+
+    return []
+
+
+def clean_name(name):
+    """Strip custom field markers from product display name."""
+    # Remove multiline field entries (newline + "- Field:" with optional colon for truncated entries)
+    name = re.sub(r'\n-\s*[^:\n]+:?', '', name)
+    # Remove annotations (e.g. "*For Persimmon Severn Valley sites only.")
+    name = re.sub(r'\n\*.*$', '', name, flags=re.DOTALL)
+    # Remove any leftover blank lines and trailing newlines
+    name = re.sub(r'\n\s*\n', '\n', name)
+    name = re.sub(r'\n+$', '', name)
+    # Remove suffix field markers (most specific first)
+    name = re.sub(r'\s*Site address to read:\s*$', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s*Site Name:\s*$', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s+to read:\s*$', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s*Name:\s*$', '', name)
+    return name.strip()
+
+
 def parse_excel():
     """Parse all products from the Excel price list."""
     wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
@@ -294,8 +356,6 @@ def extract_product_name(description):
     name = re.sub(r'\s*\(A\d\)\s*', ' ', name)
     # Clean up
     name = name.strip()
-    # Remove "Site address to read:" and similar trailing instructions
-    name = re.sub(r'\s*Site address to read:.*$', '', name)
     return name if name else description
 
 
@@ -355,6 +415,16 @@ def build_catalog():
         })
 
     print(f"Grouped into {len(product_groups)} base products")
+
+    # Detect custom fields and clean names
+    custom_field_count = 0
+    for base_code, group in product_groups.items():
+        cf = detect_custom_fields(group['name'])
+        if cf:
+            group['customFields'] = cf
+            group['name'] = clean_name(group['name'])
+            custom_field_count += 1
+    print(f"Products with custom fields: {custom_field_count}")
 
     # Assign images
     with_image = 0

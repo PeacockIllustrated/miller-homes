@@ -51,6 +51,7 @@ export default function CheckoutPage() {
             price: item.price,
             quantity: item.quantity,
             ...(item.customSign ? { customSign: item.customSign } : {}),
+            ...(item.customFieldValues ? { customFieldValues: item.customFieldValues } : {}),
           })),
           subtotal: totalPrice,
           vat: totalPrice * 0.2,
@@ -137,16 +138,27 @@ export default function CheckoutPage() {
 
             <div className="space-y-2.5 mb-4 max-h-60 overflow-y-auto">
               {items.map((item) => (
-                <div key={item.code} className="flex justify-between text-sm">
-                  <span className="text-gray-500 truncate mr-2">
-                    {item.customSign ? "Custom Sign" : item.code} x{item.quantity}
-                  </span>
-                  {item.customSign ? (
-                    <span className="font-medium text-amber-600 shrink-0 text-xs">Quote</span>
-                  ) : (
-                    <span className="font-medium text-gray-700 shrink-0">
-                      {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
+                <div key={item.code} className="text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-500 truncate mr-2">
+                      {item.customSign ? "Custom Sign" : item.code} x{item.quantity}
                     </span>
+                    {item.customSign ? (
+                      <span className="font-medium text-amber-600 shrink-0 text-xs">Quote</span>
+                    ) : (
+                      <span className="font-medium text-gray-700 shrink-0">
+                        {"\u00A3"}{(item.price * item.quantity).toFixed(2)}
+                      </span>
+                    )}
+                  </div>
+                  {item.customFieldValues && item.customFieldValues.length > 0 && (
+                    <div className="ml-1 mt-0.5">
+                      {item.customFieldValues.map((f) => (
+                        <p key={f.key} className="text-[11px] text-persimmon-green truncate">
+                          {f.label}: <span className="text-gray-400">{f.value}</span>
+                        </p>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}

@@ -11,10 +11,12 @@ interface OrderItem {
   quantity: number;
   price: number;
   customData?: {
-    signType: string;
-    textContent: string;
-    shape: string;
-    additionalNotes: string;
+    type?: string;
+    signType?: string;
+    textContent?: string;
+    shape?: string;
+    additionalNotes?: string;
+    fields?: Array<{ label: string; key: string; value: string }>;
   } | null;
 }
 
@@ -158,7 +160,7 @@ export default function AdminPage() {
                   </div>
                   <div className="flex items-center gap-2 mt-2.5">
                     <p className="text-[11px] text-gray-300">{order.items.length} items</p>
-                    {order.items.some((i) => i.customData) && (
+                    {order.items.some((i) => i.customData?.signType) && (
                       <span className="px-2 py-0.5 bg-amber-50 text-amber-600 text-[10px] font-semibold rounded-full">
                         Custom Sign
                       </span>
@@ -230,7 +232,8 @@ export default function AdminPage() {
                           </thead>
                           <tbody>
                             {order.items.map((item, i) => {
-                              if (item.customData) {
+                              // Custom sign request (price 0, quote)
+                              if (item.customData?.signType) {
                                 const typeColors: Record<string, string> = {
                                   warning: "bg-yellow-400",
                                   prohibition: "bg-red-600",
@@ -263,7 +266,9 @@ export default function AdminPage() {
                                 );
                               }
 
+                              // Standard item (with optional custom field values)
                               const imgCode = (item.baseCode || item.code.replace(/\/.*$/, "")).replace(/\//g, "_");
+                              const customFields = item.customData?.fields as Array<{ label: string; key: string; value: string }> | undefined;
                               return (
                                 <tr key={i} className="border-b border-gray-50">
                                   <td className="py-2 pr-2">
@@ -277,6 +282,15 @@ export default function AdminPage() {
                                   <td className="py-2.5">
                                     <p className="font-medium text-gray-700">{item.code}</p>
                                     <p className="text-xs text-gray-400">{item.name}{item.size ? ` (${item.size})` : ""}</p>
+                                    {customFields && customFields.length > 0 && (
+                                      <div className="mt-0.5">
+                                        {customFields.map((f) => (
+                                          <p key={f.key} className="text-[11px] text-persimmon-green">
+                                            {f.label}: <span className="text-gray-500">{f.value}</span>
+                                          </p>
+                                        ))}
+                                      </div>
+                                    )}
                                   </td>
                                   <td className="py-2.5 text-center text-gray-500">{item.quantity}</td>
                                   <td className="py-2.5 text-right font-medium">{"\u00A3"}{(item.price * item.quantity).toFixed(2)}</td>

@@ -55,3 +55,17 @@ alter table psp_order_items enable row level security;
 
 create policy "service_psp_orders" on psp_orders for all using (true) with check (true);
 create policy "service_psp_items" on psp_order_items for all using (true) with check (true);
+
+-- Suggestions table
+create table psp_suggestions (
+  id          uuid primary key default gen_random_uuid(),
+  name        text not null,
+  message     text not null,
+  status      text not null default 'new' check (status in ('new','noted','done','dismissed')),
+  created_at  timestamptz default now()
+);
+
+create index idx_psp_suggestions_created_at on psp_suggestions(created_at desc);
+
+alter table psp_suggestions enable row level security;
+create policy "service_psp_suggestions" on psp_suggestions for all using (true) with check (true);

@@ -158,7 +158,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-  if (!(await isAdminAuthed())) {
+  if (!(await isShopAuthed()) && !(await isAdminAuthed())) {
     return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
   }
 

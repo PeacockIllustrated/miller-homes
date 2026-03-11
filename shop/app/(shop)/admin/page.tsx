@@ -34,12 +34,23 @@ interface Order {
   total: number;
 }
 
+interface Suggestion {
+  id: string;
+  name: string;
+  message: string;
+  status: string;
+  createdAt: string;
+}
+
 export default function AdminPage() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedOrder, setExpandedOrder] = useState<string | null>(null);
   const [filter, setFilter] = useState("all");
   const [lightbox, setLightbox] = useState<{ src: string; code: string } | null>(null);
+  const [tab, setTab] = useState<"orders" | "suggestions">("orders");
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+  const [sugFilter, setSugFilter] = useState("all");
 
   useEffect(() => {
     fetch("/api/orders")
@@ -49,7 +60,24 @@ export default function AdminPage() {
         setLoading(false);
       })
       .catch(() => setLoading(false));
+    fetch("/api/suggestions")
+      .then((res) => res.json())
+      .then((data) => setSuggestions(data.suggestions || []))
+      .catch(() => {});
   }, []);
+
+  const updateSuggestionStatus = async (id: string, newStatus: string) => {
+    await fetch("/api/suggestions", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, status: newStatus }),
+    });
+    setSuggestions((prev) =>
+      prev.map((s) => (s.id === id ? { ...s, status: newStatus } : s))
+    );
+  };
+
+  const filteredSuggestions = sugFilter === "all" ? suggestions : suggestions.filter((s) => s.status === sugFilter);
 
   const filteredOrders = filter === "all" ? orders : orders.filter((o) => o.status === filter);
 
@@ -76,10 +104,12 @@ export default function AdminPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-persimmon-navy">Order Management</h1>
-          <p className="text-gray-400 text-sm mt-0.5">{orders.length} total orders</p>
+          <h1 className="text-2xl font-bold text-persimmon-navy">Admin Dashboard</h1>
+          <p className="text-gray-400 text-sm mt-0.5">
+            {orders.length} orders · {suggestions.length} suggestions
+          </p>
         </div>
         <Link href="/" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-persimmon-green transition">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,6 +119,105 @@ export default function AdminPage() {
         </Link>
       </div>
 
+      {/* Tab switcher */}
+      <div className="flex gap-1 mb-6 bg-gray-50 rounded-xl p-1 max-w-xs">
+        <button
+          onClick={() => setTab("orders")}
+          className={`flex-1 px-4 py-2 rounded-lg text-sm font-medium transition ${
+            tab === "orders" ? "bg-white text-persimmon-navy shadow-sm" : "text-gray-400 hover:text-gray-600"
+          }`}
+        >
+          Orders
+        </button>
+        <button
+          onClick={() => setTab("suggestions")}
+          className={`flex-1 px-4 py-2 rounded-lg text-sm font-medium transition relative ${
+            tab === "suggestions" ? "bg-white text-persimmon-navy shadow-sm" : "text-gray-400 hover:text-gray-600"
+          }`}
+        >
+          Suggestions
+          {suggestions.filter((s) => s.status === "new").length > 0 && (
+            <span className="ml-1.5 inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold bg-persimmon-green text-white rounded-full">
+              {suggestions.filter((s) => s.status === "new").length}
+            </span>
+          )}
+        </button>
+      </div>
+
+      {tab === "suggestions" ? (
+        /* ─── Suggestions Tab ─── */
+        <div>
+          <div className="flex gap-2 mb-6">
+            {["all", "new", "noted", "done", "dismissed"].map((f) => (
+              <button
+                key={f}
+                onClick={() => setSugFilter(f)}
+                className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
+                  sugFilter === f
+                    ? "bg-persimmon-navy text-white shadow-sm"
+                    : "bg-white text-gray-500 border border-gray-100 hover:bg-gray-50"
+                }`}
+              >
+                {f.charAt(0).toUpperCase() + f.slice(1)}
+                {f !== "all" && (
+                  <span className="ml-1.5 opacity-60">
+                    ({suggestions.filter((s) => s.status === f).length})
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
+          {filteredSuggestions.length === 0 ? (
+            <div className="text-center py-16">
+              <p className="text-gray-400">No suggestions yet.</p>
+            </div>
+          ) : (
+            <div className="max-w-3xl space-y-3">
+              {filteredSuggestions.map((s) => {
+                const sugStatusColors: Record<string, string> = {
+                  new: "bg-blue-50 text-blue-600",
+                  noted: "bg-amber-50 text-amber-600",
+                  done: "bg-emerald-50 text-emerald-600",
+                  dismissed: "bg-gray-100 text-gray-500",
+                };
+                return (
+                  <div key={s.id} className="bg-white border border-gray-100 rounded-2xl p-5">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <p className="font-semibold text-persimmon-navy text-sm">{s.name}</p>
+                          <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold ${sugStatusColors[s.status] || "bg-gray-100 text-gray-500"}`}>
+                            {s.status}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 whitespace-pre-wrap">{s.message}</p>
+                        <p className="text-[11px] text-gray-300 mt-2">
+                          {new Date(s.createdAt).toLocaleString("en-GB", {
+                            day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit",
+                          })}
+                        </p>
+                      </div>
+                      <select
+                        value={s.status}
+                        onChange={(e) => updateSuggestionStatus(s.id, e.target.value)}
+                        className="border border-gray-200 rounded-xl px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-persimmon-green/15 shrink-0"
+                      >
+                        <option value="new">New</option>
+                        <option value="noted">Noted</option>
+                        <option value="done">Done</option>
+                        <option value="dismissed">Dismissed</option>
+                      </select>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      ) : (
+      /* ─── Orders Tab ─── */
+      <>
       <div className="flex gap-2 mb-6">
         {["all", "new", "in-progress", "completed"].map((f) => (
           <button
@@ -347,6 +476,8 @@ export default function AdminPage() {
             <p className="text-center text-sm font-semibold text-persimmon-navy mt-3">{lightbox.code}</p>
           </div>
         </div>
+      )}
+      </>
       )}
     </div>
   );

@@ -29,12 +29,20 @@ function OrderConfirmationContent() {
         A confirmation email has been sent with your order details.
       </p>
 
-      <Link
-        href="/"
-        className="inline-block bg-persimmon-green text-white px-8 py-3 rounded-xl font-medium hover:bg-persimmon-green-dark transition"
-      >
-        Continue Shopping
-      </Link>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <Link
+          href="/orders"
+          className="inline-block bg-persimmon-green text-white px-8 py-3 rounded-xl font-medium hover:bg-persimmon-green-dark transition"
+        >
+          View Your Orders
+        </Link>
+        <Link
+          href="/"
+          className="inline-block bg-white text-gray-500 border border-gray-200 px-8 py-3 rounded-xl font-medium hover:bg-gray-50 transition"
+        >
+          Continue Shopping
+        </Link>
+      </div>
     </div>
   );
 }

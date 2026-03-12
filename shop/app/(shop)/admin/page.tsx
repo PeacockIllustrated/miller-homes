@@ -83,8 +83,16 @@ export default function AdminPage() {
 
   const statusColors: Record<string, string> = {
     new: "bg-blue-50 text-blue-600",
+    "awaiting_po": "bg-yellow-50 text-yellow-600",
     "in-progress": "bg-amber-50 text-amber-600",
     completed: "bg-emerald-50 text-emerald-600",
+  };
+
+  const statusLabels: Record<string, string> = {
+    new: "New",
+    "awaiting_po": "Awaiting PO",
+    "in-progress": "In Progress",
+    completed: "Completed",
   };
 
   const updateStatus = async (orderNumber: string, newStatus: string) => {
@@ -219,7 +227,7 @@ export default function AdminPage() {
       /* ─── Orders Tab ─── */
       <>
       <div className="flex gap-2 mb-6 overflow-x-auto">
-        {["all", "new", "in-progress", "completed"].map((f) => (
+        {["all", "new", "awaiting_po", "in-progress", "completed"].map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
@@ -229,7 +237,7 @@ export default function AdminPage() {
                 : "bg-white text-gray-500 border border-gray-100 hover:bg-gray-50"
             }`}
           >
-            {f.charAt(0).toUpperCase() + f.slice(1)}
+            {statusLabels[f] || f.charAt(0).toUpperCase() + f.slice(1)}
             {f !== "all" && (
               <span className="ml-1.5 opacity-60">
                 ({orders.filter((o) => o.status === f).length})
@@ -268,7 +276,7 @@ export default function AdminPage() {
                     <div className="flex items-start gap-3">
                       <div className="text-right">
                         <span className={`inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${statusColors[order.status] || "bg-gray-100 text-gray-500"}`}>
-                          {order.status}
+                          {statusLabels[order.status] || order.status}
                         </span>
                         <p className="text-sm font-bold text-persimmon-navy mt-1.5">
                           {"\u00A3"}{order.total.toFixed(2)}

@@ -36,6 +36,7 @@ interface Order {
 
 const statusConfig: Record<string, { label: string; color: string; description: string }> = {
   new: { label: "New", color: "bg-blue-50 text-blue-600", description: "Order received and awaiting review" },
+  "awaiting_po": { label: "Awaiting PO", color: "bg-yellow-50 text-yellow-600", description: "Order sent for purchase order approval" },
   "in-progress": { label: "In Progress", color: "bg-amber-50 text-amber-600", description: "Being processed by our team" },
   completed: { label: "Completed", color: "bg-emerald-50 text-emerald-600", description: "Order fulfilled" },
   cancelled: { label: "Cancelled", color: "bg-gray-100 text-gray-500", description: "Order cancelled" },
@@ -144,7 +145,7 @@ export default function OrdersPage() {
 
       {/* Status filters */}
       <div className="flex gap-2 mb-6 overflow-x-auto">
-        {["all", "new", "in-progress", "completed"].map((f) => (
+        {["all", "new", "awaiting_po", "in-progress", "completed"].map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
@@ -256,6 +257,7 @@ export default function OrdersPage() {
                     {/* Status banner */}
                     <div className={`flex items-center gap-2 px-4 py-2.5 rounded-xl mb-5 ${
                       order.status === "completed" ? "bg-emerald-50" :
+                      order.status === "awaiting_po" ? "bg-yellow-50" :
                       order.status === "in-progress" ? "bg-amber-50" :
                       order.status === "cancelled" ? "bg-gray-50" : "bg-blue-50"
                     }`}>
@@ -267,6 +269,10 @@ export default function OrdersPage() {
                         <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
+                      ) : order.status === "awaiting_po" ? (
+                        <svg className="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                       ) : (
                         <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
@@ -274,6 +280,7 @@ export default function OrdersPage() {
                       )}
                       <p className={`text-sm ${
                         order.status === "completed" ? "text-emerald-700" :
+                        order.status === "awaiting_po" ? "text-yellow-700" :
                         order.status === "in-progress" ? "text-amber-700" :
                         order.status === "cancelled" ? "text-gray-500" : "text-blue-700"
                       }`}>

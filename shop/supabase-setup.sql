@@ -5,7 +5,7 @@
 create table psp_orders (
   id            uuid primary key default gen_random_uuid(),
   order_number  text unique not null,
-  status        text not null default 'new' check (status in ('new','in-progress','completed','cancelled')),
+  status        text not null default 'new' check (status in ('new','awaiting_po','in-progress','completed','cancelled')),
   contact_name  text not null,
   email         text not null,
   phone         text not null,
@@ -31,7 +31,8 @@ create table psp_order_items (
   material    text,
   price       numeric(10,2) not null,
   quantity    integer not null check (quantity > 0),
-  line_total  numeric(10,2) not null
+  line_total  numeric(10,2) not null,
+  custom_data   jsonb default null
 );
 
 -- Indexes for dashboard queries

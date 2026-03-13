@@ -21,15 +21,6 @@ export default function LoginLayout({
           className="absolute -bottom-48 -left-24 w-[500px] h-[500px] rounded-full opacity-[0.03]"
           style={{ background: "radial-gradient(circle, var(--persimmon-navy) 0%, transparent 70%)" }}
         />
-        {/* Large icon watermark */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/assets/persimmon_icon.svg"
-          alt=""
-          aria-hidden="true"
-          className="absolute -bottom-20 -right-16 w-[420px] h-auto opacity-[0.03] select-none"
-          style={{ transform: "rotate(-12deg)" }}
-        />
       </div>
       {children}
     </div>

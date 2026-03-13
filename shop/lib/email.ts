@@ -20,7 +20,7 @@ function esc(str: string | null | undefined): string {
     .replace(/"/g, "&quot;");
 }
 
-interface OrderItem {
+export interface OrderItem {
   code: string;
   base_code: string | null;
   name: string;
@@ -39,7 +39,7 @@ interface OrderItem {
   } | null;
 }
 
-interface OrderData {
+export interface OrderData {
   orderNumber: string;
   contactName: string;
   email: string;
@@ -73,7 +73,7 @@ function buildImageAttachments(items: OrderItem[], siteUrl: string) {
     .filter((a): a is NonNullable<typeof a> => a !== null);
 }
 
-const SIGN_TYPE_COLORS: Record<string, { bg: string; fg: string }> = {
+export const SIGN_TYPE_COLORS: Record<string, { bg: string; fg: string }> = {
   warning: { bg: "#FFD700", fg: "#000" },
   prohibition: { bg: "#CC0000", fg: "#FFF" },
   mandatory: { bg: "#005BBB", fg: "#FFF" },

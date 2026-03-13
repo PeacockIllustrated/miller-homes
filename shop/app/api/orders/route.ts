@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { sendOrderConfirmation, sendTeamNotification, buildNestPOEmailHtml, generateRaisePoToken } from "@/lib/email";
+import { generateDeliveryNotePdf } from "@/lib/delivery-note";
 import { isShopAuthed, isAdminAuthed } from "@/lib/auth";
 
 function generateOrderNumber(): string {
@@ -145,10 +146,19 @@ export async function POST(req: NextRequest) {
       total,
     };
 
-    // Send emails + fire Make webhook in parallel
+    // Generate delivery note PDF (before webhook so we can include it)
     const siteUrl = process.env.SITE_URL || "http://localhost:3000";
     const makeWebhookUrl = process.env.MAKE_WEBHOOK_URL;
 
+    let deliveryNotePdf: string | null = null;
+    try {
+      deliveryNotePdf = await generateDeliveryNotePdf(emailData);
+      console.log(`Delivery note PDF generated for ${orderNumber} — ${Math.round(deliveryNotePdf.length * 0.75 / 1024)}KB`);
+    } catch (e) {
+      console.error("Delivery note PDF generation failed:", e);
+    }
+
+    // Send emails + fire Make webhook in parallel
     await Promise.all([
       sendOrderConfirmation(emailData).catch((e) => console.error("Confirmation email failed:", e)),
       sendTeamNotification(emailData).catch((e) => console.error("Team notification failed:", e)),
@@ -179,6 +189,7 @@ export async function POST(req: NextRequest) {
                 total,
                 itemCount: validatedItems.length,
                 hasCustomItems: validatedItems.some((i: { custom_data: unknown }) => !!i.custom_data),
+                deliveryNotePdf,
               }),
             })
               .then((r) => console.log(`Make webhook fired for ${orderNumber} — ${r.status}`))

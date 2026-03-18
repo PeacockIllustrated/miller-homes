@@ -175,6 +175,7 @@ export async function POST(req: NextRequest) {
               body: JSON.stringify({
                 brand: "persimmon",
                 isPO: false,
+                hasPurchaser: !!purchaserEmail,
                 emailSubject: subject,
                 emailHtml: html,
                 raisePoUrl,
@@ -191,10 +192,10 @@ export async function POST(req: NextRequest) {
                 total,
                 itemCount: validatedItems.length,
                 hasCustomItems: validatedItems.some((i: { custom_data: unknown }) => !!i.custom_data),
-                purchaserName: purchaserName ? String(purchaserName) : null,
-                purchaserEmail: purchaserEmail ? String(purchaserEmail) : null,
-                purchaserEmailSubject: purchaserEmailPayload?.subject || null,
-                purchaserEmailHtml: purchaserEmailPayload?.html || null,
+                purchaserName: purchaserName ? String(purchaserName) : "",
+                purchaserEmail: purchaserEmail ? String(purchaserEmail) : "",
+                purchaserEmailSubject: purchaserEmailPayload?.subject || "",
+                purchaserEmailHtml: purchaserEmailPayload?.html || "",
               }),
             })
               .then((r) => console.log(`Make webhook fired for ${orderNumber} — ${r.status}`))

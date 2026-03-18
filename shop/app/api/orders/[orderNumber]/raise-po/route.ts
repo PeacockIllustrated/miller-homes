@@ -118,12 +118,14 @@ export async function GET(
       : null;
 
     // Fire Make webhook with isPO: true
+    const hasPurchaser = !!(order.purchaser_email);
     const res = await fetch(makeWebhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         brand: "persimmon",
         isPO: true,
+        hasPurchaser,
         emailSubject: subject,
         emailHtml: html,
         orderNumber: order.order_number,
@@ -139,19 +141,21 @@ export async function GET(
         total: Number(order.total),
         itemCount: (items || []).length,
         hasCustomItems: (items || []).some((i: Record<string, unknown>) => !!i.custom_data),
-        purchaserName: order.purchaser_name || null,
-        purchaserEmail: order.purchaser_email || null,
-        purchaserEmailSubject: purchaserEmailPayload?.subject || null,
-        purchaserEmailHtml: purchaserEmailPayload?.html || null,
+        purchaserName: order.purchaser_name || "",
+        purchaserEmail: order.purchaser_email || "",
+        purchaserEmailSubject: purchaserEmailPayload?.subject || "",
+        purchaserEmailHtml: purchaserEmailPayload?.html || "",
       }),
     });
 
     console.log(`Raise PO webhook fired for ${orderNumber} — ${res.status}`);
 
     // Show confirmation page
-    const purchaserLabel = order.purchaser_name || order.purchaser_email || "the purchaser";
+    const confirmMsg = hasPurchaser
+      ? `Sent to ${order.purchaser_name || order.purchaser_email}`
+      : "PO raised — sent to Onesign";
     return new NextResponse(
-      confirmationHtml(orderNumber, `Sent to ${purchaserLabel}`),
+      confirmationHtml(orderNumber, confirmMsg),
       { headers: { "Content-Type": "text/html" } }
     );
   } catch (error) {

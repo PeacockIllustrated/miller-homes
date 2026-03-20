@@ -23,6 +23,13 @@ export default function CustomSizeSection({ product, category }: Props) {
   const [widthStr, setWidthStr] = useState("");
   const [heightStr, setHeightStr] = useState("");
   const [quantities, setQuantities] = useState<Record<string, number>>({});
+  const customFields = product.customFields || [];
+  const [fieldValues, setFieldValues] = useState<Record<string, string>>(() =>
+    Object.fromEntries(customFields.map((f) => [f.key, ""]))
+  );
+  const allFieldsFilled = customFields.length === 0 || customFields.every(
+    (f) => fieldValues[f.key]?.trim()
+  );
 
   const width = parseInt(widthStr, 10);
   const height = parseInt(heightStr, 10);
@@ -60,6 +67,14 @@ export default function CustomSizeSection({ product, category }: Props) {
       requiresQuote: result.requiresQuote,
     };
 
+    const cfValues = customFields.length
+      ? customFields.map((f) => ({
+          label: f.label,
+          key: f.key,
+          value: fieldValues[f.key].trim(),
+        }))
+      : undefined;
+
     const baseCode = result.matchedVariant?.code || product.baseCode;
     addItem(
       {
@@ -72,12 +87,18 @@ export default function CustomSizeSection({ product, category }: Props) {
         price: result.matchedVariant?.price || 0,
         image: product.image,
         customSizeData,
+        ...(cfValues ? { customFieldValues: cfValues } : {}),
       },
       qty
     );
 
-    // Reset quantity for this material
+    // Reset quantity and custom fields
     setQuantities((prev) => ({ ...prev, [result.material]: 1 }));
+    if (customFields.length) {
+      setFieldValues(
+        Object.fromEntries(customFields.map((f) => [f.key, ""]))
+      );
+    }
   };
 
   return (
@@ -156,6 +177,30 @@ export default function CustomSizeSection({ product, category }: Props) {
             </p>
           )}
 
+          {customFields.length > 0 && (
+            <div className="space-y-2">
+              {customFields.map((field) => (
+                <div key={field.key}>
+                  <label className="block text-xs font-medium text-gray-500 mb-1">
+                    {field.label} <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    value={fieldValues[field.key]}
+                    onChange={(e) =>
+                      setFieldValues((prev) => ({
+                        ...prev,
+                        [field.key]: e.target.value,
+                      }))
+                    }
+                    placeholder={`Enter ${field.label.toLowerCase()}`}
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-persimmon-green/15 focus:border-persimmon-green outline-none transition bg-white"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
           {validWidth && validHeight && results.length === 0 && (
             <p className="text-sm text-gray-400">
               No sized variants available for this product.
@@ -228,7 +273,8 @@ export default function CustomSizeSection({ product, category }: Props) {
                 </div>
                 <button
                   onClick={() => handleAdd(result)}
-                  className={`flex-1 py-2.5 px-6 rounded-xl font-medium transition-all text-white flex items-center justify-center gap-2 active:scale-[0.98] ${
+                  disabled={!allFieldsFilled}
+                  className={`flex-1 py-2.5 px-6 rounded-xl font-medium transition-all text-white flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100 ${
                     result.requiresQuote
                       ? "bg-amber-500 hover:bg-amber-600"
                       : "bg-persimmon-green hover:bg-persimmon-green-dark"

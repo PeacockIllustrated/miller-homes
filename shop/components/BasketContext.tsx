@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
+import type { CustomSizeData } from "@/lib/custom-size-pricing";
 
 export interface CustomSignData {
   signType: string;
@@ -27,6 +28,7 @@ export interface BasketItem {
   image: string | null;
   customSign?: CustomSignData;
   customFieldValues?: CustomFieldValue[];
+  customSizeData?: CustomSizeData;
 }
 
 interface BasketContextType {

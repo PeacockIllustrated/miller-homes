@@ -40,7 +40,7 @@ export async function POST(
 
     // Fetch current status so we only transition awaiting_po → new
     const { data: current } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .select("status")
       .eq("order_number", orderNumber)
       .single();
@@ -56,7 +56,7 @@ export async function POST(
     }
 
     const { error } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .update(updates)
       .eq("order_number", orderNumber);
 

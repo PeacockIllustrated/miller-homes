@@ -1,5 +1,7 @@
--- Persimmon Signage Portal — Supabase Schema
--- Run this in Supabase SQL Editor to create the required tables.
+-- Miller Homes Signage Portal — Supabase Schema (REFERENCE ONLY)
+-- For new deployments, use supabase-migration-mh.sql instead.
+-- This file shows the original psp_ schema for reference.
+-- The mh_ tables are created by the migration file.
 
 -- Orders table
 create table psp_orders (

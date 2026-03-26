@@ -15,7 +15,7 @@ export async function GET(
     const { orderNumber } = await params;
 
     const { data: order, error: orderError } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .select("*")
       .eq("order_number", orderNumber)
       .single();
@@ -25,7 +25,7 @@ export async function GET(
     }
 
     const { data: items } = await supabase
-      .from("psp_order_items")
+      .from("mh_order_items")
       .select("*")
       .eq("order_id", order.id);
 

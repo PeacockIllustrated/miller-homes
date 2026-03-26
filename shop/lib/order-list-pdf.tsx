@@ -17,10 +17,10 @@ import { SIGN_TYPE_COLORS } from "./email";
 /*  Colours                                                            */
 /* ------------------------------------------------------------------ */
 const C = {
-  navy: "#00474a",
-  green: "#3db28c",
-  lightGreenBg: "#f8faf9",
-  greenBorder: "#bbf7d0",
+  navy: "#0c1975",
+  green: "#0c1975",
+  lightGreenBg: "#e8eaf6",
+  greenBorder: "#b3bce6",
   orangeBg: "#fff7ed",
   orangeBorder: "#fed7aa",
   orangeText: "#c2410c",

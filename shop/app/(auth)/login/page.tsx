@@ -46,9 +46,9 @@ function LoginForm() {
       <div className="w-full max-w-sm" style={{ animation: "slide-up 0.5s ease-out" }}>
         {/* Brand mark */}
         <div className="text-center mb-10">
-          <Image src="/assets/persimmon_icon.svg" alt="Persimmon" width={80} height={80} className="mx-auto mb-5 w-20 h-auto" />
+          <Image src="/assets/miller_icon.svg" alt="Miller Homes" width={80} height={80} className="mx-auto mb-5 w-20 h-auto" />
           <div className="flex justify-center mb-3">
-            <Image src="/assets/persimmon_wordmark.svg" alt="Persimmon" width={160} height={24} className="h-5 w-auto" />
+            <Image src="/assets/miller_wordmark.svg" alt="Miller Homes" width={200} height={28} className="h-7 w-auto" />
           </div>
           <p className="text-sm text-gray-400 mt-2 tracking-wide">
             {mode === "admin" ? "Order management" : "Signage Portal"}
@@ -57,7 +57,7 @@ function LoginForm() {
 
         <form onSubmit={handleSubmit} className="bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-100 p-6 shadow-sm">
           <div className="mb-5">
-            <label htmlFor="password" className="block text-xs font-semibold text-persimmon-navy/60 uppercase tracking-wider mb-2">
+            <label htmlFor="password" className="block text-xs font-semibold text-miller-navy/60 uppercase tracking-wider mb-2">
               Password
             </label>
             <input
@@ -67,7 +67,7 @@ function LoginForm() {
               autoFocus
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-persimmon-green/15 focus:border-persimmon-green outline-none transition bg-white"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-miller-blue/15 focus:border-miller-blue outline-none transition bg-white"
               placeholder="Enter your password"
             />
           </div>
@@ -80,14 +80,14 @@ function LoginForm() {
             type="submit"
             disabled={loading}
             className="w-full text-white py-3 rounded-xl font-medium transition disabled:opacity-50 active:scale-[0.98] shadow-sm"
-            style={{ background: loading ? "var(--persimmon-green)" : "linear-gradient(135deg, var(--persimmon-green) 0%, var(--persimmon-green-dark) 100%)" }}
+            style={{ background: loading ? "var(--miller-blue)" : "linear-gradient(135deg, var(--miller-blue) 0%, var(--miller-blue-dark) 100%)" }}
           >
             {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
 
         <p className="text-center text-[11px] text-gray-300 mt-6 tracking-wide">
-          Persimmon Fulfillment
+          Miller Homes Fulfillment
         </p>
       </div>
     </div>

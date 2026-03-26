@@ -12,10 +12,10 @@ function confirmationHtml(orderNumber: string, message: string): string {
 <title>PO Sent — ${esc(orderNumber)}</title></head>
 <body style="margin:0;font-family:Arial,sans-serif;background:#f8faf9;display:flex;align-items:center;justify-content:center;min-height:100vh">
   <div style="text-align:center;background:white;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.08);max-width:440px;width:100%;margin:16px;padding:40px">
-    <div style="width:48px;height:48px;border-radius:50%;background:#3db28c;margin:0 auto 16px;display:flex;align-items:center;justify-content:center">
+    <div style="width:48px;height:48px;border-radius:50%;background:#0c1975;margin:0 auto 16px;display:flex;align-items:center;justify-content:center">
       <svg width="24" height="24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
     </div>
-    <h1 style="color:#00474a;font-size:20px;margin:0 0 8px">${esc(message)}</h1>
+    <h1 style="color:#0c1975;font-size:20px;margin:0 0 8px">${esc(message)}</h1>
     <p style="color:#666;font-size:14px;margin:0 0 24px">Order <strong>${esc(orderNumber)}</strong> — the purchaser will receive an email with a link to attach their PO document.</p>
     <p style="color:#999;font-size:12px;margin:0">You can close this page.</p>
   </div>
@@ -49,7 +49,7 @@ export async function GET(
   try {
     // Fetch order
     const { data: order, error: orderError } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .select("*")
       .eq("order_number", orderNumber)
       .single();
@@ -74,13 +74,13 @@ export async function GET(
 
     // Update status immediately to prevent race conditions from double-clicks
     await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .update({ status: "awaiting_po" })
       .eq("order_number", orderNumber);
 
     // Fetch order items
     const { data: items } = await supabase
-      .from("psp_order_items")
+      .from("mh_order_items")
       .select("*")
       .eq("order_id", order.id);
 
@@ -123,7 +123,7 @@ export async function GET(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        brand: "persimmon",
+        brand: "miller-homes",
         isPO: true,
         hasPurchaser,
         emailSubject: subject,
@@ -153,7 +153,7 @@ export async function GET(
     // Show confirmation page
     const confirmMsg = hasPurchaser
       ? `Sent to ${order.purchaser_name || order.purchaser_email}`
-      : "PO raised — sent to Onesign";
+      : "PO raised — sent to Nest";
     return new NextResponse(
       confirmationHtml(orderNumber, confirmMsg),
       { headers: { "Content-Type": "text/html" } }

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Showroom / External Signage — Pricing Sheet</title>
+<link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #00474A;
+    --navy-deep: #002E30;
+    --teal: #3DB28C;
+    --cream: #F8F6F2;
+    --white: #FFFFFF;
+    --dark: #1A1D21;
+    --mid: #4A5568;
+    --light: #94A3B8;
+    --border: #E2E8F0;
+    --hint: #B8C5D3;
+  }
+  html, body {
+    width: 210mm;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    padding: 4mm 8mm 3.5mm 8mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+  }
+  .header-logo svg {
+    height: 7mm;
+    width: auto;
+  }
+  .header-divider {
+    width: 1px;
+    height: 6mm;
+    background: rgba(255,255,255,0.25);
+  }
+  .header h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .header-right {
+    text-align: right;
+    color: rgba(255,255,255,0.6);
+    font-size: 6.5pt;
+    line-height: 1.6;
+  }
+  .header-right strong { color: var(--teal); font-weight: 600; }
+  .teal-bar {
+    height: 0.6mm;
+    background: linear-gradient(90deg, var(--teal) 0%, transparent 100%);
+    flex-shrink: 0;
+  }
+
+  /* ── Grid ── */
+  .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    padding: 2mm 3mm 1.5mm 3mm;
+  }
+  .card {
+    border: 0.5px solid var(--border);
+    border-radius: 2.5mm;
+    margin: 1mm;
+    padding: 2.5mm 3mm 2mm 3mm;
+    display: flex;
+    gap: 2.5mm;
+    background: var(--white);
+    overflow: hidden;
+    position: relative;
+  }
+  .card:nth-child(even) { background: var(--cream); }
+  .card-num {
+    position: absolute;
+    top: 0.5mm;
+    right: 2mm;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    color: var(--teal);
+    opacity: 0.10;
+    line-height: 1;
+  }
+  .card-img {
+    width: 20mm;
+    min-width: 20mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .card-img img {
+    max-width: 20mm;
+    max-height: 52mm;
+    object-fit: contain;
+    border-radius: 1mm;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.10));
+  }
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .card-title {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 400;
+    font-size: 8pt;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5mm;
+    line-height: 1.2;
+  }
+  .card-desc {
+    font-size: 5.5pt;
+    color: var(--mid);
+    line-height: 1.35;
+    margin-bottom: 1.5mm;
+    min-height: 5mm;
+  }
+
+  /* ── Material + Options row ── */
+  .meta-row {
+    display: flex;
+    gap: 2mm;
+    margin-bottom: 1.5mm;
+  }
+  .meta-field {
+    flex: 1;
+  }
+  .meta-label {
+    font-size: 4.5pt;
+    font-weight: 700;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3mm;
+  }
+  .meta-input {
+    border-bottom: 0.5px solid var(--light);
+    min-height: 3.5mm;
+  }
+  .meta-hint {
+    font-size: 4.5pt;
+    color: var(--hint);
+    font-style: italic;
+    margin-top: 0.3mm;
+    line-height: 1.2;
+  }
+
+  /* ── Size/Price table ── */
+  .size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: auto;
+  }
+  .size-table th {
+    font-size: 4.5pt;
+    font-weight: 700;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding: 0 0.5mm 0.5mm 0;
+    border-bottom: 0.5px solid var(--teal);
+  }
+  .size-table th:last-child { text-align: right; padding-right: 0; }
+  .size-table td {
+    border-bottom: 0.5px dotted var(--border);
+    height: 4mm;
+    font-size: 6pt;
+    padding: 0 0.5mm 0 0;
+    vertical-align: bottom;
+  }
+  .size-table td:last-child { text-align: right; padding-right: 0; }
+  .size-table tr:last-child td { border-bottom: 0.5px solid var(--light); }
+
+  /* ── Footer ── */
+  .footer {
+    flex-shrink: 0;
+    padding: 1.5mm 8mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.5px solid var(--border);
+    background: var(--cream);
+  }
+  .footer-left {
+    font-size: 5.5pt;
+    color: var(--mid);
+  }
+  .footer-left strong { color: var(--navy); }
+  .footer-right {
+    font-size: 5pt;
+    color: var(--light);
+    text-align: right;
+  }
+
+  /* ── Page 2 header (lighter) ── */
+  .header-cont {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    padding: 2.5mm 8mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .header-cont h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .header-cont .page-label {
+    font-size: 6.5pt;
+    color: rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ PAGE 1 ═══════════════ -->
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <div class="header-logo">
+        <svg viewBox="0 0 148.75 26.93" xmlns="http://www.w3.org/2000/svg">
+          <polygon fill="#5cc8a5" points="17.81 3.63 11.79 9.81 11.84 23.23 13.55 23.81 13.49 10.38 19.51 4.2 17.81 3.63"/>
+          <polygon fill="#5cc8a5" points="13.4 2.16 7.41 8.31 7.47 21.76 10.36 22.74 10.31 9.29 16.3 3.13 13.4 2.16"/>
+          <polygon fill="#5cc8a5" points="7.22 0 1.2 6.18 1.26 19.67 5.8 21.23 5.75 7.74 11.77 1.56 7.22 0"/>
+          <polygon fill="#3DB28C" points="19.51 4.21 13.49 10.39 13.55 23.81 18.31 22.21 18.28 15.08 21.75 13.92 21.78 21.05 25.85 19.68 25.79 6.26 19.51 4.21"/>
+          <polyline fill="#3DB28C" points="13.56 26.93 27.66 22.19 27.65 20.55 13.56 25.28"/>
+          <polyline fill="#5cc8a5" points="13.56 25.28 0 20.61 0 22.26 13.56 26.93"/>
+          <path fill="#FFFFFF" d="M41.08,5.91h-6.19v14.21h3.43v-5.8h1.93c3.91-.08,5.86-1.48,5.86-4.33,0-2.43-1.9-4.08-5.02-4.08M39.7,13.33h-1.38v-6.43h1.63c2.09,0,2.62,1.49,2.62,3.11,0,1.89-.59,3.32-2.87,3.32"/>
+          <path fill="#FFFFFF" d="M77.49,5.97c0-1.03.84-1.86,1.86-1.86s1.86.84,1.86,1.86-.84,1.86-1.86,1.86-1.86-.84-1.86-1.86M77.72,9.24h3.26v10.88h-3.26v-10.88Z"/>
+          <path fill="#FFFFFF" d="M123.96,14.89c0-3.24,2.43-5.54,6.01-5.54s6.03,2.3,6.03,5.54-2.43,5.55-6.03,5.55-6.01-2.32-6.01-5.55M132.47,14.89c0-3.44-.82-4.6-2.51-4.6s-2.49,1.16-2.49,4.6.82,4.6,2.49,4.6,2.51-1.23,2.51-4.6"/>
+          <path fill="#FFFFFF" d="M72.15,13.48c-1.03-.45-2.1-.86-2.24-2.02,0,0,0-.02,0-.02,0-.05,0-.1,0-.15h0s0-.06,0-.09c0-.02,0-.03,0-.05.03-.57.37-.82.57-.91.21-.09.49-.14.87-.12,0,0,.37,0,1.09.22,1.59.5,2.45,1.11,2.45,1.11v-1.19c-1.27-.82-3.04-.91-3.04-.91,0,0-.17,0-.26,0-2.68,0-4.37,1.26-4.37,3.31,0,2.18,1.72,2.87,3.26,3.47.71.29,1.47.57,2.01,1h0s0,0,0,0c.1.08.19.17.27.26.22.27.45.75.22,1.43-.21.53-.79,1.03-2.3.68-.7-.16-1.25-.31-1.69-.45-.92-.31-1.64-.69-1.64-.69l.02,1.3c1.15.54,2.64.77,3.75.77,2.74,0,4.64-1.26,4.64-3.39s-1.97-2.82-3.58-3.56"/>
+          <path fill="#FFFFFF" d="M98.07,9.35h0s-2.98-.31-4.4,1.5c-.53-.84-1.45-1.42-2.75-1.5h0s-2.74-.28-4.22,1.29l-1.63-1.4h-1.28v10.88h3.26v-7.07c0-.36.08-.74.11-.84.28-1.02.87-1.69,1.97-1.69,1.42,0,1.84.9,1.84,2.39v7.22h3.26v-6.92c0-.54.06-.86.08-.96.26-1.01.89-1.73,1.99-1.73,1.42,0,1.84.9,1.84,2.39v7.22h3.26v-6.86c0-2.48-1.13-3.79-3.34-3.9"/>
+          <path fill="#FFFFFF" d="M118.48,9.35h0s-2.98-.31-4.4,1.5c-.53-.85-1.46-1.42-2.76-1.5h0s-2.73-.28-4.21,1.28l-1.63-1.4h-1.28v10.88h3.26v-7.07c0-.36.08-.74.11-.84.29-1.02.87-1.69,1.97-1.69,1.42,0,1.84.9,1.84,2.39v7.22h3.26v-6.92c0-.54.06-.86.08-.96.26-1.01.89-1.73,1.99-1.73,1.42,0,1.84.9,1.84,2.39v7.22h3.26v-6.86c0-2.48-1.13-3.79-3.34-3.9"/>
+          <path fill="#FFFFFF" d="M145.37,9.35h0s-2.77-.29-4.25,1.32l-1.66-1.43h-1.28v10.88h3.31v-6.4c0-.31.02-.59.05-.84,0-.05.02-.11.02-.17.03-.24.07-.44.11-.6.18-.64.5-1.01.72-1.21.02-.01.04-.03.06-.05.02-.01.03-.03.05-.04.29-.2.65-.31,1.08-.31,1.42,0,1.88.88,1.88,2.39v7.22h3.29v-6.86c0-2.53-1.18-3.79-3.38-3.9"/>
+          <path fill="#FFFFFF" d="M66.1,9.32s-.01,0-.02,0h0s-.1,0-.19,0c-.59.02-2.18.18-3.16,1.32l-1.64-1.41h-1.28s0,10.88,0,10.88h3.26v-7.08c0-1.45.74-2.08,1.49-2.35.52-.14,1.08-.17,1.55-.17v-1.2s0,0,0,0"/>
+          <path fill="#FFFFFF" d="M57.55,14.93c.08-.4.15-.79.15-1.17,0-2.57-1.88-4.42-4.77-4.42s-5.86,1.72-5.86,5.48c0,3.08,1.99,5.61,5.96,5.61,2.04,0,3.15-.64,3.92-1.25.22-.16.33-.27.33-.27v-1.03c-2.33,2.09-4.31,1.65-4.6,1.59-1-.23-1.49-1.09-1.71-1.7-.25-.74-.38-1.67-.39-2.84h6.97ZM52.93,10.3c1.32,0,1.95.93,1.95,2.99,0,.21,0,.47-.02.73h-4.26c.09-2.54.66-3.73,2.33-3.73"/>
+        </svg>
+      </div>
+      <div class="header-divider"></div>
+      <h1>Showroom / External Signage</h1>
+    </div>
+    <div class="header-right">
+      Prepared by <strong>Onesign and Digital</strong><br>
+      Please complete <strong>sizes</strong>, <strong>material</strong> and <strong>price</strong> for each item &mdash; add rows as needed
+    </div>
+  </div>
+  <div class="teal-bar"></div>
+
+  <div class="grid">
+
+    <!-- 1. Banner (Flag) -->
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-banner.png"></div>
+      <div class="card-body">
+        <div class="card-title">Banner (Flag)</div>
+        <div class="card-desc">Printed fabric banner / flag only, for use with banner pole system</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. printed polyester, PVC mesh</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. single / double-sided print</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2. Banner Pole -->
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-bannerpole.jpeg"></div>
+      <div class="card-body">
+        <div class="card-title">Banner Pole</div>
+        <div class="card-desc">Freestanding pole / post unit with arms, ground-mounted (banner sold separately)</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. powder-coated aluminium, steel</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. base plate / root-fixed, arm width</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Height</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3. Fascia Sign -->
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-fascia.png"></div>
+      <div class="card-body">
+        <div class="card-title">Fascia Sign</div>
+        <div class="card-desc">Horizontal wall-mounted fascia, bracket-fixed to building exterior</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. aluminium composite, folded ali tray</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. illuminated / non-illuminated, custom text</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. Icon Wall -->
+    <div class="card">
+      <div class="card-num">04</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-iconwall.png"></div>
+      <div class="card-body">
+        <div class="card-title">Icon Wall (Logo Only)</div>
+        <div class="card-desc">3D cut Persimmon house icon, wall-mounted on brickwork. Logo only, no text.</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. built-up stainless steel, flat-cut acrylic</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. illuminated / halo-lit / non-illuminated</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5. Logo Wall -->
+    <div class="card">
+      <div class="card-num">05</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-logowall.png"></div>
+      <div class="card-body">
+        <div class="card-title">Logo Wall (Logo + Text)</div>
+        <div class="card-desc">3D cut house icon with "Persimmon" lettering, wall-mounted on brickwork</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. built-up stainless steel, flat-cut acrylic</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. illuminated / halo-lit / non-illuminated</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Overall size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 6. Panel Sign (Landscape) -->
+    <div class="card">
+      <div class="card-num">06</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-panelsignlegs.png"></div>
+      <div class="card-body">
+        <div class="card-title">Panel Sign &mdash; Landscape</div>
+        <div class="card-desc">Landscape panel on two post legs for courtesy / information messages</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. dibond, foamex, aluminium composite</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. list standard messages, custom text available?</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><strong>Onesign and Digital</strong> &nbsp;&bull;&nbsp; D86 Princesway, Gateshead NE11 0TU &nbsp;&bull;&nbsp; 0191 487 6767 &nbsp;&bull;&nbsp; onesignanddigital.com</div>
+    <div class="footer-right">Page 1 of 2</div>
+  </div>
+</div>
+
+<!-- ═══════════════ PAGE 2 ═══════════════ -->
+<div class="page">
+  <div class="header-cont">
+    <h2>Showroom / External Signage &mdash; continued</h2>
+    <span class="page-label">Page 2 of 2</span>
+  </div>
+  <div class="teal-bar"></div>
+
+  <div class="grid">
+
+    <!-- 7. Panel Sign (Portrait) -->
+    <div class="card">
+      <div class="card-num">07</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-portraitpanelsignlegs.png"></div>
+      <div class="card-body">
+        <div class="card-title">Panel Sign &mdash; Portrait</div>
+        <div class="card-desc">Portrait panel on legs for promotional messages (e.g. Part Exchange, Help to Buy)</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. dibond, foamex, aluminium composite</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. list standard messages, custom text available?</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 8. Show Home Lettering -->
+    <div class="card">
+      <div class="card-num">08</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-showhome.png"></div>
+      <div class="card-body">
+        <div class="card-title">Show Home Lettering</div>
+        <div class="card-desc">3D cut lettering, wall-mounted on brickwork</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. built-up stainless steel, flat-cut acrylic</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. "Show Home", "Sales Office", "Marketing Suite", custom</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Wording / Size</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 9. Site Totem -->
+    <div class="card">
+      <div class="card-num">09</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-site totem.png"></div>
+      <div class="card-body">
+        <div class="card-title">Site Totem</div>
+        <div class="card-desc">Tall freestanding totem sign with development name, bedroom count and contact details</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. aluminium frame, printed panels, acrylic face</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. illuminated / non-illum, single / double-sided</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H x D)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 10. Site Map Board -->
+    <div class="card">
+      <div class="card-num">10</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-sitemap.jpg"></div>
+      <div class="card-body">
+        <div class="card-title">Site Map Board</div>
+        <div class="card-desc">Large landscape information board on two posts, for community contributions / site overview</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. dibond, aluminium composite, anti-graffiti lam</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. custom artwork per site? design charge separate?</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 11. Site Sign -->
+    <div class="card">
+      <div class="card-num">11</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-sitesign.png"></div>
+      <div class="card-body">
+        <div class="card-title">Site Sign (Freestanding)</div>
+        <div class="card-desc">Portrait sign on two metal legs with development name, bedroom count, contact details</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. aluminium composite, printed panel, steel legs</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Options</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. illuminated / non-illum, custom artwork per site</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size (W x H)</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 12. Window Vinyl -->
+    <div class="card">
+      <div class="card-num">12</div>
+      <div class="card-img"><img src="../public/images/showroom-external/per-windowvinyl.png"></div>
+      <div class="card-body">
+        <div class="card-title">Window Vinyl</div>
+        <div class="card-desc">Branded vinyl graphics applied to show home / marketing suite windows</div>
+        <div class="meta-row">
+          <div class="meta-field">
+            <div class="meta-label">Material</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. optically clear vinyl, frosted, one-way vision</div>
+          </div>
+          <div class="meta-field">
+            <div class="meta-label">Pricing basis</div>
+            <div class="meta-input"></div>
+            <div class="meta-hint">e.g. per window, per sq metre, per set, per elevation</div>
+          </div>
+        </div>
+        <table class="size-table">
+          <tr><th>Size / Window type</th><th>Price (ex. VAT)</th></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- General questions section -->
+  <div style="padding: 0 4mm 0 4mm; flex-shrink: 0;">
+    <div style="background: var(--cream); border: 0.5px solid var(--border); border-radius: 2mm; padding: 2.5mm 4mm; display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm;">
+      <div style="flex:1;">
+        <div class="meta-label" style="margin-bottom: 1mm; font-size: 5pt; color: var(--navy);">Any items custom-quoted only (no fixed price)?</div>
+        <div class="meta-input" style="min-height: 4mm;"></div>
+      </div>
+      <div style="flex:1;">
+        <div class="meta-label" style="margin-bottom: 1mm; font-size: 5pt; color: var(--navy);">Installation included or quoted separately?</div>
+        <div class="meta-input" style="min-height: 4mm;"></div>
+      </div>
+      <div style="flex:1;">
+        <div class="meta-label" style="margin-bottom: 1mm; font-size: 5pt; color: var(--navy);">Typical lead time?</div>
+        <div class="meta-input" style="min-height: 4mm;"></div>
+      </div>
+      <div style="flex:1;">
+        <div class="meta-label" style="margin-bottom: 1mm; font-size: 5pt; color: var(--navy);">Any other sign types to add?</div>
+        <div class="meta-input" style="min-height: 4mm;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" style="margin-top: 1.5mm;">
+    <div class="footer-left"><strong>Onesign and Digital</strong> &nbsp;&bull;&nbsp; D86 Princesway, Gateshead NE11 0TU &nbsp;&bull;&nbsp; 0191 487 6767 &nbsp;&bull;&nbsp; onesignanddigital.com</div>
+    <div class="footer-right">Please return completed to the portal team &nbsp;&bull;&nbsp; Page 2 of 2</div>
+  </div>
+</div>
+
+</body>
+</html>

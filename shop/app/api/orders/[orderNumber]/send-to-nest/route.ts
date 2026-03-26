@@ -16,7 +16,7 @@ export async function POST(
 
     // Fetch order
     const { data: order, error: orderError } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .select("*")
       .eq("order_number", orderNumber)
       .single();
@@ -35,7 +35,7 @@ export async function POST(
 
     // Fetch order items
     const { data: items } = await supabase
-      .from("psp_order_items")
+      .from("mh_order_items")
       .select("*")
       .eq("order_id", order.id);
 
@@ -85,7 +85,7 @@ export async function POST(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        brand: "persimmon",
+        brand: "miller-homes",
         isPO: true,
         emailSubject: subject,
         emailHtml: html,
@@ -119,7 +119,7 @@ export async function POST(
     // Update status to awaiting_po if currently new
     if (order.status === "new") {
       await supabase
-        .from("psp_orders")
+        .from("mh_orders")
         .update({ status: "awaiting_po" })
         .eq("order_number", orderNumber);
     }

@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Persimmon Signage Portal",
-  description: "Order construction signage for your Persimmon development",
+  title: "Miller Homes Signage Portal",
+  description: "Order construction signage for your Miller Homes development",
 };
 
 export default function RootLayout({

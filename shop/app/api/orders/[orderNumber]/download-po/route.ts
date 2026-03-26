@@ -14,7 +14,7 @@ export async function GET(
     const { orderNumber } = await params;
 
     const { data: order, error } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .select("po_document_name, po_document_data, po_document_type")
       .eq("order_number", orderNumber)
       .single();

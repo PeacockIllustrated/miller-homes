@@ -57,18 +57,18 @@ export default function PoUploadForm({
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen m-0" style={{ background: "#f8faf9", fontFamily: "Arial, sans-serif" }}>
+    <div className="flex items-center justify-center min-h-screen m-0" style={{ background: "#e8eaf6", fontFamily: "Arial, sans-serif" }}>
       <div className="text-center bg-white rounded-2xl shadow-lg max-w-[440px] w-full mx-4" style={{ padding: "40px" }}>
 
         {/* PO Raised confirmation */}
         {justRaised && !uploaded && (
           <>
-            <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "#3db28c" }}>
+            <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "#0c1975" }}>
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h1 className="text-xl font-bold mb-1" style={{ color: "#00474a" }}>PO Request Sent</h1>
+            <h1 className="text-xl font-bold mb-1" style={{ color: "#0c1975" }}>PO Request Sent</h1>
             <p className="text-sm text-gray-500 mb-6">
               Order <strong>{orderNumber}</strong> has been sent for purchase order processing.
             </p>
@@ -79,26 +79,26 @@ export default function PoUploadForm({
         {/* Upload success */}
         {uploaded ? (
           <>
-            <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "#3db28c" }}>
+            <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "#0c1975" }}>
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h1 className="text-xl font-bold mb-2" style={{ color: "#00474a" }}>PO Uploaded</h1>
+            <h1 className="text-xl font-bold mb-2" style={{ color: "#0c1975" }}>PO Uploaded</h1>
             <p className="text-sm text-gray-500 mb-5">
               Your purchase order for <strong>{orderNumber}</strong> has been attached successfully. You can close this page.
             </p>
             <a
               href="/orders"
               className="inline-block text-sm font-semibold rounded-lg transition-all"
-              style={{ color: "#3db28c", padding: "8px 20px", border: "1.5px solid #3db28c" }}
+              style={{ color: "#0c1975", padding: "8px 20px", border: "1.5px solid #0c1975" }}
             >
               View Orders
             </a>
           </>
         ) : (
           <>
-            <h2 className="text-base font-bold mb-1" style={{ color: "#00474a" }}>Upload Purchase Order</h2>
+            <h2 className="text-base font-bold mb-1" style={{ color: "#0c1975" }}>Upload Purchase Order</h2>
             <p className="text-xs text-gray-400 mb-5">
               Attach your PO document for order <strong>{orderNumber}</strong>
             </p>
@@ -116,9 +116,9 @@ export default function PoUploadForm({
               onClick={() => inputRef.current?.click()}
               className="rounded-xl cursor-pointer transition-all mb-4"
               style={{
-                border: `2px dashed ${dragOver ? "#3db28c" : file ? "#3db28c" : "#ddd"}`,
+                border: `2px dashed ${dragOver ? "#0c1975" : file ? "#0c1975" : "#ddd"}`,
                 padding: "28px 16px",
-                background: dragOver ? "#f0faf6" : file ? "#f8fdf9" : "#fafafa",
+                background: dragOver ? "#e8eaf6" : file ? "#eceef6" : "#fafafa",
               }}
             >
               <input
@@ -134,10 +134,10 @@ export default function PoUploadForm({
 
               {file ? (
                 <div>
-                  <svg className="w-8 h-8 mx-auto mb-2" style={{ color: "#3db28c" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2" style={{ color: "#0c1975" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <p className="font-semibold text-sm mb-0.5" style={{ color: "#00474a" }}>{file.name}</p>
+                  <p className="font-semibold text-sm mb-0.5" style={{ color: "#0c1975" }}>{file.name}</p>
                   <p className="text-xs text-gray-400">{(file.size / 1024).toFixed(0)} KB</p>
                 </div>
               ) : (
@@ -146,7 +146,7 @@ export default function PoUploadForm({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                   </svg>
                   <p className="text-sm text-gray-500 mb-0.5">
-                    Drop your PO here or <span className="font-semibold" style={{ color: "#3db28c" }}>browse</span>
+                    Drop your PO here or <span className="font-semibold" style={{ color: "#0c1975" }}>browse</span>
                   </p>
                   <p className="text-xs text-gray-300">PDF or image, max 5MB</p>
                 </div>
@@ -162,7 +162,7 @@ export default function PoUploadForm({
               disabled={!file || uploading}
               className="w-full text-white rounded-xl font-bold text-sm transition-all"
               style={{
-                background: file ? "#3db28c" : "#ccc",
+                background: file ? "#0c1975" : "#ccc",
                 padding: "12px 24px",
                 cursor: file ? "pointer" : "not-allowed",
                 opacity: uploading ? 0.6 : 1,

@@ -8,7 +8,7 @@ export async function GET() {
   }
 
   const { data, error } = await supabase
-    .from("psp_sites")
+    .from("mh_sites")
     .select("*")
     .order("name", { ascending: true });
 
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
     // Check for existing site with same name (upsert semantics)
     const { data: existing } = await supabase
-      .from("psp_sites")
+      .from("mh_sites")
       .select("*")
       .eq("name", name)
       .maybeSingle();
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     }
 
     const { data, error } = await supabase
-      .from("psp_sites")
+      .from("mh_sites")
       .insert({ name, address })
       .select()
       .single();
@@ -81,7 +81,7 @@ export async function PUT(req: NextRequest) {
     if (!address || address.length > 500) return NextResponse.json({ error: "Address is required (max 500 chars)" }, { status: 400 });
 
     const { data, error } = await supabase
-      .from("psp_sites")
+      .from("mh_sites")
       .update({ name, address })
       .eq("id", id)
       .select()
@@ -104,9 +104,9 @@ export async function DELETE(req: NextRequest) {
     if (!id) return NextResponse.json({ error: "id is required" }, { status: 400 });
 
     // Nullify FK references on orders first
-    await supabase.from("psp_orders").update({ site_id: null }).eq("site_id", id);
+    await supabase.from("mh_orders").update({ site_id: null }).eq("site_id", id);
 
-    const { error } = await supabase.from("psp_sites").delete().eq("id", id);
+    const { error } = await supabase.from("mh_sites").delete().eq("id", id);
     if (error) return NextResponse.json({ error: "Failed to delete site" }, { status: 500 });
     return NextResponse.json({ success: true });
   } catch {

@@ -1,0 +1,83 @@
+{
+  "orderNumber": "PER-20260312-0042",
+  "contactName": "Sarah Mitchell",
+  "email": "s.mitchell@example-construction.co.uk",
+  "phone": "07700 123456",
+  "siteName": "Riverside Quarter Phase 2",
+  "siteAddress": "14 Riverside Way, Manchester, M3 4LQ",
+  "poNumber": "BB-PO-2026-0891",
+  "notes": "Urgent - signage needed before site inspection on 20th March. Please prioritise mandatory signs. Gate access code: 4821.",
+  "subtotal": 287.50,
+  "vat": 57.50,
+  "total": 345.00,
+  "itemCount": 5,
+  "hasCustomItems": true,
+  "emailSubject": "PO Request - PER-20260312-0042 - Riverside Quarter Phase 2",
+  "emailHtml": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto\"><div style=\"background:#00474a;padding:24px 32px;border-radius:12px 12px 0 0\"><h1 style=\"color:white;margin:0;font-size:20px\">Purchase Order Request</h1></div><div style=\"padding:32px;border:1px solid #eee;border-top:none;border-radius:0 0 12px 12px\"><div style=\"background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px 20px;margin-bottom:24px\"><p style=\"margin:0;font-size:18px;font-weight:bold;color:#00474a\">PER-20260312-0042</p><p style=\"margin:4px 0 0;font-size:14px;color:#666\">&pound;345.00 inc. VAT &middot; 5 items</p></div><div style=\"display:flex;gap:24px;margin-bottom:24px\"><div><p style=\"font-size:12px;color:#999;text-transform:uppercase;margin:0 0 4px\">Contact</p><p style=\"margin:0;font-size:14px\"><strong>Sarah Mitchell</strong></p><p style=\"margin:2px 0;font-size:14px;color:#666\">s.mitchell@example-construction.co.uk</p><p style=\"margin:0;font-size:14px;color:#666\">07700 123456</p></div><div><p style=\"font-size:12px;color:#999;text-transform:uppercase;margin:0 0 4px\">Site</p><p style=\"margin:0;font-size:14px\"><strong>Riverside Quarter Phase 2</strong></p><p style=\"margin:2px 0;font-size:14px;color:#666\">14 Riverside Way, Manchester, M3 4LQ</p></div></div><p style=\"font-size:14px;color:#666;margin-bottom:16px\"><strong>Customer PO:</strong> BB-PO-2026-0891</p><div style=\"background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-bottom:24px\"><p style=\"margin:0;font-size:13px;color:#c2410c\"><strong>Notes:</strong> Urgent - signage needed before site inspection on 20th March. Please prioritise mandatory signs. Gate access code: 4821.</p></div><table style=\"width:100%;border-collapse:collapse;margin:20px 0\"><thead><tr style=\"background:#f5f5f5\"><th style=\"padding:8px 12px;text-align:left;font-size:12px;color:#666;text-transform:uppercase;width:48px\"></th><th style=\"padding:8px 8px;text-align:left;font-size:12px;color:#666;text-transform:uppercase\">Product</th><th style=\"padding:8px 8px;text-align:center;font-size:12px;color:#666;text-transform:uppercase\">Qty</th><th style=\"padding:8px 12px 8px 8px;text-align:right;font-size:12px;color:#666;text-transform:uppercase\">Total</th></tr></thead><tbody><tr><td style=\"padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px\"><img src=\"https://persimmon-signage.vercel.app/images/products/FWP400_1.png\" alt=\"FWP400/1\" width=\"40\" height=\"40\" style=\"display:block;border-radius:4px;object-fit:contain;background:#f8f8f8\" /></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle\"><strong style=\"color:#333\">FWP400/1</strong><br/><span style=\"color:#666;font-size:12px\">Fire Action Notice (300x200mm)</span></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle\">10</td><td style=\"padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle\">&pound;62.50</td></tr><tr><td style=\"padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px\"><img src=\"https://persimmon-signage.vercel.app/images/products/MSS300_1.png\" alt=\"MSS300/1\" width=\"40\" height=\"40\" style=\"display:block;border-radius:4px;object-fit:contain;background:#f8f8f8\" /></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle\"><strong style=\"color:#333\">MSS300/1</strong><br/><span style=\"color:#666;font-size:12px\">Safety Helmet Must Be Worn (400x300mm)</span></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle\">5</td><td style=\"padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle\">&pound;75.00</td></tr><tr><td style=\"padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px\"><img src=\"https://persimmon-signage.vercel.app/images/products/CSS100_2.png\" alt=\"CSS100/2\" width=\"40\" height=\"40\" style=\"display:block;border-radius:4px;object-fit:contain;background:#f8f8f8\" /></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle\"><strong style=\"color:#333\">CSS100/2</strong><br/><span style=\"color:#666;font-size:12px\">Caution Wet Floor (600x450mm)</span><br/><span style=\"color:#00474a;font-size:11px\">Site Reference: <span style=\"color:#666\">Block B - Main Entrance</span></span></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle\">3</td><td style=\"padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle\">&pound;45.00</td></tr><tr><td style=\"padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px\"><img src=\"https://persimmon-signage.vercel.app/images/products/PSS200_1.png\" alt=\"PSS200/1\" width=\"40\" height=\"40\" style=\"display:block;border-radius:4px;object-fit:contain;background:#f8f8f8\" /></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle\"><strong style=\"color:#333\">PSS200/1</strong><br/><span style=\"color:#666;font-size:12px\">No Entry Authorised Personnel Only (200x150mm)</span></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle\">8</td><td style=\"padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:right;vertical-align:middle\">&pound;105.00</td></tr><tr><td style=\"padding:8px 4px 8px 12px;border-bottom:1px solid #eee;vertical-align:middle;width:48px\"><div style=\"width:40px;height:40px;border-radius:4px;background:#005BBB;display:flex;align-items:center;justify-content:center\"><span style=\"color:#FFF;font-size:10px;font-weight:bold;text-align:center;line-height:1.1\">Mandatory</span></div></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;vertical-align:middle\"><strong style=\"color:#333\">CUSTOM SIGN REQUEST</strong><br/><span style=\"color:#666;font-size:12px\">Mandatory &middot; Rectangle &middot; 600x400mm</span><br/><span style=\"color:#c2410c;font-size:12px\">Text: &ldquo;All visitors must report to site office before entering&rdquo;</span><br/><span style=\"color:#999;font-size:11px\">Notes: Include Persimmon logo top-right</span></td><td style=\"padding:8px 8px;border-bottom:1px solid #eee;font-size:14px;text-align:center;vertical-align:middle\">1</td><td style=\"padding:8px 12px 8px 8px;border-bottom:1px solid #eee;font-size:12px;text-align:right;vertical-align:middle;color:#d97706;font-weight:bold\">Quote</td></tr></tbody><tfoot><tr><td colspan=\"3\" style=\"padding:8px 12px;text-align:right;font-size:14px;color:#666\">Subtotal</td><td style=\"padding:8px 12px 8px 8px;text-align:right;font-size:14px\">&pound;287.50</td></tr><tr><td colspan=\"3\" style=\"padding:8px 12px;text-align:right;font-size:14px;color:#666\">VAT (20%)</td><td style=\"padding:8px 12px 8px 8px;text-align:right;font-size:14px\">&pound;57.50</td></tr><tr><td colspan=\"3\" style=\"padding:8px 12px;text-align:right;font-weight:bold;font-size:14px;color:#00474a\">Total</td><td style=\"padding:8px 12px 8px 8px;text-align:right;font-weight:bold;font-size:14px;color:#00474a\">&pound;345.00</td></tr><tr><td colspan=\"4\" style=\"padding:12px;text-align:center;font-size:12px;color:#d97706;background:#fffbeb;border-radius:0 0 8px 8px\">* Custom sign items will be quoted separately. Final pricing confirmed after review.</td></tr></tfoot></table></div></div>",
+  "items": [
+    {
+      "code": "FWP400/1",
+      "baseCode": "FWP400_1",
+      "name": "Fire Action Notice",
+      "size": "300x200mm",
+      "material": "Rigid Plastic",
+      "price": 6.25,
+      "quantity": 10,
+      "lineTotal": 62.50,
+      "customData": null
+    },
+    {
+      "code": "MSS300/1",
+      "baseCode": "MSS300_1",
+      "name": "Safety Helmet Must Be Worn",
+      "size": "400x300mm",
+      "material": "Self-Adhesive Vinyl",
+      "price": 15.00,
+      "quantity": 5,
+      "lineTotal": 75.00,
+      "customData": null
+    },
+    {
+      "code": "CSS100/2",
+      "baseCode": "CSS100_2",
+      "name": "Caution Wet Floor",
+      "size": "600x450mm",
+      "material": "Rigid Plastic",
+      "price": 15.00,
+      "quantity": 3,
+      "lineTotal": 45.00,
+      "customData": {
+        "fields": [
+          {"label": "Site Reference", "key": "site_ref", "value": "Block B - Main Entrance"}
+        ]
+      }
+    },
+    {
+      "code": "PSS200/1",
+      "baseCode": "PSS200_1",
+      "name": "No Entry Authorised Personnel Only",
+      "size": "200x150mm",
+      "material": "Self-Adhesive Vinyl",
+      "price": 13.125,
+      "quantity": 8,
+      "lineTotal": 105.00,
+      "customData": null
+    },
+    {
+      "code": "CUSTOM",
+      "baseCode": null,
+      "name": "Custom Sign Request",
+      "size": "600x400mm",
+      "material": null,
+      "price": 0,
+      "quantity": 1,
+      "lineTotal": 0,
+      "customData": {
+        "signType": "mandatory",
+        "textContent": "All visitors must report to site office before entering",
+        "shape": "Rectangle",
+        "additionalNotes": "Include Persimmon logo top-right"
+      }
+    }
+  ]
+}

@@ -33,7 +33,7 @@ export async function POST(
     const base64 = Buffer.from(arrayBuffer).toString("base64");
 
     const { error } = await supabase
-      .from("psp_orders")
+      .from("mh_orders")
       .update({
         dn_document_name: file.name,
         dn_document_data: base64,

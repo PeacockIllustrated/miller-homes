@@ -12,7 +12,7 @@ if (inputFile) {
   pdfPath = resolve(__dirname, basename(inputFile, '.html') + '.pdf');
 } else {
   htmlPath = resolve(__dirname, 'brochure.html');
-  pdfPath = resolve(__dirname, 'Persimmon-Signage-Portal-Brochure-v2.pdf');
+  pdfPath = resolve(__dirname, 'Miller-Homes-Signage-Portal-Brochure.pdf');
 }
 
 const browser = await puppeteer.launch({ headless: true });

@@ -140,14 +140,14 @@ export default function OrdersPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-persimmon-navy">Your Orders</h1>
+          <h1 className="text-2xl font-bold text-miller-navy">Your Orders</h1>
           <p className="text-gray-400 text-sm mt-0.5">
             {orders.length} {orders.length === 1 ? "order" : "orders"} placed
           </p>
         </div>
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-persimmon-green transition"
+          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-miller-blue transition"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -160,7 +160,7 @@ export default function OrdersPage() {
       {contactCards.length > 0 && (
         <div className="mb-5">
           <div className="flex items-center gap-3 mb-3">
-            <h2 className="text-sm font-semibold text-persimmon-navy">Ordered By</h2>
+            <h2 className="text-sm font-semibold text-miller-navy">Ordered By</h2>
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
             {contactCards.map((contact) => {
@@ -179,7 +179,7 @@ export default function OrdersPage() {
                   onClick={() => setSelectedContactId(isSelected ? null : contact.contactId)}
                   className={`flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full border-2 transition-all whitespace-nowrap shrink-0 ${
                     isSelected
-                      ? "border-persimmon-green bg-white shadow-sm"
+                      ? "border-miller-blue bg-white shadow-sm"
                       : "border-gray-100 bg-white hover:border-gray-200"
                   }`}
                 >
@@ -189,7 +189,7 @@ export default function OrdersPage() {
                   >
                     {initials}
                   </span>
-                  <span className="text-sm font-medium text-persimmon-navy">{contact.name}</span>
+                  <span className="text-sm font-medium text-miller-navy">{contact.name}</span>
                   <span className="text-[11px] text-gray-400">{contact.orderCount}</span>
                 </button>
               );
@@ -202,8 +202,8 @@ export default function OrdersPage() {
       {siteCards.length > 0 && (
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-3">
-            <h2 className="text-sm font-semibold text-persimmon-navy">Your Sites</h2>
-            <span className="bg-persimmon-navy text-white px-2.5 py-0.5 rounded-full text-[11px] font-medium">
+            <h2 className="text-sm font-semibold text-miller-navy">Your Sites</h2>
+            <span className="bg-miller-navy text-white px-2.5 py-0.5 rounded-full text-[11px] font-medium">
               {siteCards.length} {siteCards.length === 1 ? "site" : "sites"}
             </span>
           </div>
@@ -216,14 +216,14 @@ export default function OrdersPage() {
                   onClick={() => setSelectedSiteId(isSelected ? null : site.siteId)}
                   className={`text-left p-4 rounded-xl border-2 transition-all ${
                     isSelected
-                      ? "border-persimmon-green bg-white shadow-sm"
+                      ? "border-miller-blue bg-white shadow-sm"
                       : "border-gray-100 bg-white hover:border-gray-200"
                   }`}
                 >
                   <div className="flex justify-between items-start mb-1">
-                    <p className="font-semibold text-persimmon-navy text-sm">{site.name}</p>
+                    <p className="font-semibold text-miller-navy text-sm">{site.name}</p>
                     {isSelected && (
-                      <span className="w-5 h-5 bg-persimmon-green rounded-full flex items-center justify-center shrink-0">
+                      <span className="w-5 h-5 bg-miller-blue rounded-full flex items-center justify-center shrink-0">
                         <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
@@ -254,7 +254,7 @@ export default function OrdersPage() {
         <div className="flex items-center gap-3 mb-4 flex-wrap">
           {selectedContactId && (
             <div className="flex items-center gap-1.5">
-              <span className="text-sm text-persimmon-navy font-medium">
+              <span className="text-sm text-miller-navy font-medium">
                 By: {contactCards.find((c) => c.contactId === selectedContactId)?.name}
               </span>
               <button
@@ -267,7 +267,7 @@ export default function OrdersPage() {
           )}
           {selectedSiteId && (
             <div className="flex items-center gap-1.5">
-              <span className="text-sm text-persimmon-navy font-medium">
+              <span className="text-sm text-miller-navy font-medium">
                 Site: {siteCards.find((s) => s.siteId === selectedSiteId)?.name}
               </span>
               <button
@@ -281,7 +281,7 @@ export default function OrdersPage() {
           {selectedContactId && selectedSiteId && (
             <button
               onClick={() => { setSelectedContactId(null); setSelectedSiteId(null); }}
-              className="text-xs text-persimmon-green font-medium hover:underline transition"
+              className="text-xs text-miller-blue font-medium hover:underline transition"
             >
               Clear all
             </button>
@@ -309,7 +309,7 @@ export default function OrdersPage() {
           placeholder="Search by order number, name or site..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-persimmon-green/15 focus:border-persimmon-green transition"
+          className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-miller-blue/15 focus:border-miller-blue transition"
         />
       </div>
 
@@ -321,7 +321,7 @@ export default function OrdersPage() {
             onClick={() => setFilter(f)}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition whitespace-nowrap ${
               filter === f
-                ? "bg-persimmon-navy text-white shadow-sm"
+                ? "bg-miller-navy text-white shadow-sm"
                 : "bg-white text-gray-500 border border-gray-100 hover:bg-gray-50"
             }`}
           >
@@ -357,7 +357,7 @@ export default function OrdersPage() {
           {!search && filter === "all" && (
             <Link
               href="/"
-              className="inline-block bg-persimmon-green text-white px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-persimmon-green-dark transition"
+              className="inline-block bg-miller-blue text-white px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-miller-blue-dark transition"
             >
               Browse Signs
             </Link>
@@ -376,13 +376,13 @@ export default function OrdersPage() {
                   onClick={() => setExpandedOrder(isExpanded ? null : order.orderNumber)}
                   className={`w-full text-left bg-white border p-5 transition-all hover:shadow-md ${
                     isExpanded
-                      ? "border-persimmon-green shadow-md rounded-t-2xl rounded-b-none border-b-0"
+                      ? "border-miller-blue shadow-md rounded-t-2xl rounded-b-none border-b-0"
                       : "border-gray-100 hover:border-gray-200 rounded-2xl"
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <p className="font-semibold text-persimmon-navy">{order.orderNumber}</p>
+                      <p className="font-semibold text-miller-navy">{order.orderNumber}</p>
                       <p className="text-sm text-gray-500 mt-0.5 truncate">{order.site.siteName}</p>
                       <div className="flex items-center gap-2 mt-2">
                         <p className="text-[11px] text-gray-300">{order.items.length} {order.items.length === 1 ? "item" : "items"}</p>
@@ -398,7 +398,7 @@ export default function OrdersPage() {
                         <span className={`inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${status.color}`}>
                           {status.label}
                         </span>
-                        <p className="text-sm font-bold text-persimmon-navy mt-1.5">
+                        <p className="text-sm font-bold text-miller-navy mt-1.5">
                           {"\u00A3"}{order.total.toFixed(2)}
                         </p>
                         <p className="text-[11px] text-gray-400 mt-0.5">
@@ -423,7 +423,7 @@ export default function OrdersPage() {
 
                 {/* Expanded detail */}
                 {isExpanded && (
-                  <div className="bg-white rounded-b-2xl border border-t-0 border-persimmon-green p-6">
+                  <div className="bg-white rounded-b-2xl border border-t-0 border-miller-blue p-6">
                     {/* Status banner */}
                     <div className={`flex items-center gap-2 px-4 py-2.5 rounded-xl mb-5 ${
                       order.status === "completed" ? "bg-emerald-50" :
@@ -604,7 +604,7 @@ export default function OrdersPage() {
                                     <img
                                       src={`/images/products/${imgCode}.png`}
                                       alt={item.code}
-                                      className="w-9 h-9 rounded object-contain bg-gray-50 cursor-pointer hover:ring-2 hover:ring-persimmon-green/40 transition"
+                                      className="w-9 h-9 rounded object-contain bg-gray-50 cursor-pointer hover:ring-2 hover:ring-miller-blue/40 transition"
                                       onClick={() =>
                                         setLightbox({ src: `/images/products/${imgCode}.png`, code: item.code })
                                       }
@@ -619,7 +619,7 @@ export default function OrdersPage() {
                                     {customFields && customFields.length > 0 && (
                                       <div className="mt-0.5">
                                         {customFields.map((f) => (
-                                          <p key={f.key} className="text-[11px] text-persimmon-green">
+                                          <p key={f.key} className="text-[11px] text-miller-blue">
                                             {f.label}: <span className="text-gray-500">{f.value}</span>
                                           </p>
                                         ))}
@@ -654,7 +654,7 @@ export default function OrdersPage() {
                                 {order.vat.toFixed(2)}
                               </td>
                             </tr>
-                            <tr className="font-bold text-persimmon-navy">
+                            <tr className="font-bold text-miller-navy">
                               <td colSpan={3} className="pt-2 text-right">
                                 Total
                               </td>
@@ -695,7 +695,7 @@ export default function OrdersPage() {
               </svg>
             </button>
             <img src={lightbox.src} alt={lightbox.code} className="w-full rounded-xl object-contain bg-gray-50" />
-            <p className="text-center text-sm font-semibold text-persimmon-navy mt-3">{lightbox.code}</p>
+            <p className="text-center text-sm font-semibold text-miller-navy mt-3">{lightbox.code}</p>
           </div>
         </div>
       )}

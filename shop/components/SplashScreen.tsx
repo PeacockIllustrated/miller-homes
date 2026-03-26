@@ -32,8 +32,8 @@ export default function SplashScreen() {
         style={{ animation: "splash-icon-in 0.7s ease-out both" }}
       >
         <Image
-          src="/assets/persimmon_icon.svg"
-          alt="Persimmon"
+          src="/assets/miller_icon.svg"
+          alt="Miller Homes"
           width={64}
           height={62}
           priority
@@ -43,10 +43,11 @@ export default function SplashScreen() {
       {/* Wordmark */}
       <div style={{ animation: "splash-wordmark-in 0.6s ease-out 0.4s both" }}>
         <Image
-          src="/assets/persimmon_wordmark.svg"
-          alt="Persimmon"
-          width={160}
-          height={23}
+          src="/assets/miller_wordmark.svg"
+          alt="Miller Homes"
+          width={200}
+          height={28}
+          className="h-7 w-auto"
           priority
         />
       </div>

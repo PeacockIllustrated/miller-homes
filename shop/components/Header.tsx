@@ -25,19 +25,19 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
             <Image
-              src="/assets/persimmon_icon.svg"
-              alt="Persimmon"
+              src="/assets/miller_icon.svg"
+              alt="Miller Homes"
               width={28}
               height={27}
               className="shrink-0"
             />
             <div className="flex flex-col">
               <Image
-                src="/assets/persimmon_wordmark.svg"
-                alt="Persimmon"
-                width={90}
-                height={13}
-                className="h-[13px] w-auto"
+                src="/assets/miller_wordmark.svg"
+                alt="Miller Homes"
+                width={110}
+                height={15}
+                className="h-[15px] w-auto"
               />
               <span className="text-[10px] text-gray-400 leading-tight mt-0.5 tracking-wide">Signage Portal</span>
             </div>
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Link
               href="/custom-sign"
-              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-persimmon-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
+              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-miller-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
@@ -60,7 +60,7 @@ export default function Header() {
 
             <Link
               href="/orders"
-              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-persimmon-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
+              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-miller-navy px-3 py-2 rounded-lg hover:bg-gray-50 transition"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -70,19 +70,19 @@ export default function Header() {
 
             <button
               onClick={() => setDrawerOpen(true)}
-              className="relative flex items-center gap-2 text-sm font-medium text-persimmon-navy bg-persimmon-gray hover:bg-persimmon-gray-dark rounded-lg px-4 py-2.5 transition"
+              className="relative flex items-center gap-2 text-sm font-medium text-miller-navy bg-miller-gray hover:bg-miller-gray-dark rounded-lg px-4 py-2.5 transition"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
               </svg>
               {totalItems > 0 && (
                 <>
-                  <span className="text-persimmon-navy">{totalItems}</span>
+                  <span className="text-miller-navy">{totalItems}</span>
                   <span className="text-gray-300">|</span>
-                  <span className="text-persimmon-green font-semibold">
+                  <span className="text-miller-blue font-semibold">
                     {"\u00A3"}{totalPrice.toFixed(2)}
                   </span>
-                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-persimmon-green rounded-full" />
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-miller-blue rounded-full" />
                 </>
               )}
             </button>
@@ -103,7 +103,7 @@ export default function Header() {
             <SearchBar />
             <Link
               href="/custom-sign"
-              className="flex items-center gap-2 text-sm text-gray-500 hover:text-persimmon-navy mt-3 px-1"
+              className="flex items-center gap-2 text-sm text-gray-500 hover:text-miller-navy mt-3 px-1"
               onClick={() => setMenuOpen(false)}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ export default function Header() {
             </Link>
             <Link
               href="/orders"
-              className="flex items-center gap-2 text-sm text-gray-500 hover:text-persimmon-navy mt-3 px-1"
+              className="flex items-center gap-2 text-sm text-gray-500 hover:text-miller-navy mt-3 px-1"
               onClick={() => setMenuOpen(false)}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

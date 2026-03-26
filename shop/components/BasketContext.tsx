@@ -54,7 +54,7 @@ export function BasketProvider({ children }: { children: ReactNode }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("persimmon-basket");
+    const stored = localStorage.getItem("miller-basket");
     if (stored) {
       try {
         setItems(JSON.parse(stored));
@@ -65,7 +65,7 @@ export function BasketProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (loaded) {
-      localStorage.setItem("persimmon-basket", JSON.stringify(items));
+      localStorage.setItem("miller-basket", JSON.stringify(items));
     }
   }, [items, loaded]);
 

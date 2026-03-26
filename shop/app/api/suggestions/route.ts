@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Please provide a suggestion (at least 5 characters)" }, { status: 400 });
     }
 
-    const { error } = await supabase.from("psp_suggestions").insert({ name, message });
+    const { error } = await supabase.from("mh_suggestions").insert({ name, message });
 
     if (error) {
       console.error("Supabase insert error:", error);
@@ -40,7 +40,7 @@ export async function GET() {
 
   try {
     const { data, error } = await supabase
-      .from("psp_suggestions")
+      .from("mh_suggestions")
       .select("*")
       .order("created_at", { ascending: false });
 
@@ -83,7 +83,7 @@ export async function PATCH(req: NextRequest) {
     }
 
     const { error } = await supabase
-      .from("psp_suggestions")
+      .from("mh_suggestions")
       .update({ status })
       .eq("id", id);
 
